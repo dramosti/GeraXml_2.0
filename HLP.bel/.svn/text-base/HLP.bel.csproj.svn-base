@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{24E3C2DC-DA18-4DF1-BC64-9CCE5D2F2E9A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HLP.bel</RootNamespace>
+    <AssemblyName>HLP.bel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AC.ExtendedRenderer.Toolkit, Version=4.4.0.1, Culture=neutral, PublicKeyToken=2f7c2ef04fde3964, processorArchitecture=MSIL">
+      <HintPath>..\DLL\AC.ExtendedRenderer.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.3.2.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL" />
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=2.0.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="belConnection.cs" />
+    <Compile Include="belFecharJanela.cs" />
+    <Compile Include="belIsolated.cs" />
+    <Compile Include="belRegedit.cs" />
+    <Compile Include="CTe\Expressoes.cs" />
+    <Compile Include="CTe\infCte\compl\belcomData.cs" />
+    <Compile Include="CTe\infCte\compl\belComHora.cs" />
+    <Compile Include="CTe\infCte\compl\belcompl.cs" />
+    <Compile Include="CTe\infCte\compl\belEntrega.cs" />
+    <Compile Include="CTe\infCte\compl\belfluxo.cs" />
+    <Compile Include="CTe\infCte\compl\belnoInter.cs" />
+    <Compile Include="CTe\infCte\compl\belnoPeriodo.cs" />
+    <Compile Include="CTe\infCte\compl\belObsContCte.cs" />
+    <Compile Include="CTe\infCte\compl\belpass.cs" />
+    <Compile Include="CTe\infCte\compl\belsemData.cs" />
+    <Compile Include="CTe\infCte\compl\belsemHora.cs" />
+    <Compile Include="CTe\infCte\dest\beldest.cs" />
+    <Compile Include="CTe\infCte\dest\belenderDest.cs" />
+    <Compile Include="CTe\infCte\dest\bellocEnt.cs" />
+    <Compile Include="CTe\infCte\emit\belemit.cs" />
+    <Compile Include="CTe\infCte\emit\belenderEmit.cs" />
+    <Compile Include="CTe\infCte\ide\belenderToma.cs" />
+    <Compile Include="CTe\infCte\ide\belide.cs" />
+    <Compile Include="CTe\infCte\ide\beltoma03.cs" />
+    <Compile Include="CTe\infCte\ide\beltoma04.cs" />
+    <Compile Include="CTe\infCte\imp\belICMS.cs" />
+    <Compile Include="CTe\infCte\imp\belICMS00.cs" />
+    <Compile Include="CTe\infCte\imp\belICMS20.cs" />
+    <Compile Include="CTe\infCte\imp\belICMS45.cs" />
+    <Compile Include="CTe\infCte\imp\belICMS60.cs" />
+    <Compile Include="CTe\infCte\imp\belICMS90.cs" />
+    <Compile Include="CTe\infCte\imp\belICMSOutraUF.cs" />
+    <Compile Include="CTe\infCte\imp\belICMSSN.cs" />
+    <Compile Include="CTe\infCte\imp\belimp.cs" />
+    <Compile Include="CTe\infCte\infCteComp\belcompComp.cs" />
+    <Compile Include="CTe\infCte\infCteComp\belICMSComp.cs" />
+    <Compile Include="CTe\infCte\infCteComp\belimpComp.cs" />
+    <Compile Include="CTe\infCte\infCteComp\belinfCteComp.cs" />
+    <Compile Include="CTe\infCte\infCteComp\belvPresComp.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\belaereo.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\belaquav.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\belcontDCL.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\belcontQt.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\belCTRB.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\belDCL.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\beldetVag.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\beldetVagDCL.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\beldisp.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\beldocAnt.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\belemiDocAnt.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\belemiOcc.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\belenderFerro.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\belferroSub.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\belferrov.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\belidDocAnt.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\belidDocAntEle.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\belidDocAntPap.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\belinfCarga.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\belinfCTeNorm.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\belinfQ.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\bellacContQt.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\bellacDetVagDCL.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\bellacre.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\bellacRodo.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\belmoto.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\belocc.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\belprop.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\belrodo.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\belseg.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\beltarifa.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\belvalePed.cs" />
+    <Compile Include="CTe\infCte\infCTeNorm\belveic.cs" />
+    <Compile Include="CTe\infCte\rem\belenderReme.cs" />
+    <Compile Include="CTe\infCte\rem\belinfNF.cs" />
+    <Compile Include="CTe\infCte\rem\belinfNFe.cs" />
+    <Compile Include="CTe\infCte\rem\belinfOutros.cs" />
+    <Compile Include="CTe\infCte\rem\bellocRet.cs" />
+    <Compile Include="CTe\infCte\rem\belrem.cs" />
+    <Compile Include="NFe\belLorenzon.cs" />
+    <Compile Include="NFe\belRegras.cs" />
+    <Compile Include="NFe\GeraXml\AssinaNFeXml.cs" />
+    <Compile Include="NFe\GeraXml\belGerarXML.cs" />
+    <Compile Include="NFe\GeraXml\GeraXMLExp.cs" />
+    <Compile Include="NFe\GeraXml\Globais.cs" />
+    <Compile Include="Static\belStaticPastas.cs" />
+    <Compile Include="belUtil.cs" />
+    <Compile Include="belVersionamento.cs" />
+    <Compile Include="belWindosOpen.cs" />
+    <Compile Include="CCe\belPesquisaCCe.cs" />
+    <Compile Include="CCe\belEnvEvento.cs" />
+    <Compile Include="CCe\belEvento.cs" />
+    <Compile Include="CTe\belAssinaCte.cs" />
+    <Compile Include="CTe\belCancelaCte.cs" />
+    <Compile Include="CTe\belCriaXml.cs" />
+    <Compile Include="CTe\belEmailCte.cs" />
+    <Compile Include="CTe\belGlobais.cs" />
+    <Compile Include="CTe\belInutilizaFaixaCte.cs" />
+    <Compile Include="CTe\belNumeroConhec.cs" />
+    <Compile Include="CTe\belPopulaDataSet.cs" />
+    <Compile Include="CTe\belPopulaObjetos.cs" />
+    <Compile Include="CTe\belStatusCte.cs" />
+    <Compile Include="CTe\belTrataMensagem.cs" />
+    <Compile Include="CTe\infCte\belinfCte.cs" />
+    <Compile Include="CTe\infCte\exped\belenderExped.cs" />
+    <Compile Include="CTe\infCte\exped\belexped.cs" />
+    <Compile Include="CTe\infCte\infCteAnu\belinfCteAnu.cs" />
+    <Compile Include="CTe\infCte\receb\belenderReceb.cs" />
+    <Compile Include="CTe\infCte\receb\belreceb.cs" />
+    <Compile Include="CTe\infCte\vPrest\belComp.cs" />
+    <Compile Include="CTe\infCte\vPrest\belvPrest.cs" />
+    <Compile Include="CTe\util.cs" />
+    <Compile Include="InternetCS.cs" />
+    <Compile Include="Msg_Padrao.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Msg_Padrao.resx</DependentUpon>
+    </Compile>
+    <Compile Include="NFes\belCancelamentoNFse.cs" />
+    <Compile Include="NFes\belCreateXml.cs" />
+    <Compile Include="NFes\belimpressao.cs" />
+    <Compile Include="NFes\belRecepcao.cs" />
+    <Compile Include="NFes\belTabelaErros.cs" />
+    <Compile Include="NFes\belWebServices.cs" />
+    <Compile Include="NFes\TcContato.cs" />
+    <Compile Include="NFes\TcCpfCnpj.cs" />
+    <Compile Include="NFes\tcDadosConstrucaoCivil.cs" />
+    <Compile Include="NFes\tcDadosPrestador.cs" />
+    <Compile Include="NFes\TcDadosServico.cs" />
+    <Compile Include="NFes\tcDadosTomador.cs" />
+    <Compile Include="NFes\TcEndereco.cs" />
+    <Compile Include="NFes\TcIdentificacaoIntermediarioServico.cs" />
+    <Compile Include="NFes\tcIdentificacaoNfse.cs" />
+    <Compile Include="NFes\TcInfNfse.cs" />
+    <Compile Include="NFes\tcInfPedidoCancelamento.cs" />
+    <Compile Include="NFes\TcInfRps.cs" />
+    <Compile Include="NFes\tcLoteRps.cs" />
+    <Compile Include="NFes\TcNfse.cs" />
+    <Compile Include="NFes\TcPedidoCancelamento.cs" />
+    <Compile Include="NFes\TcRps.cs" />
+    <Compile Include="NFes\TcValores.cs" />
+    <Compile Include="NFe\avulsa.cs" />
+    <Compile Include="Barcode\BarcodeCommon.cs" />
+    <Compile Include="Barcode\BarcodeLib.cs" />
+    <Compile Include="NFe\beladi.cs" />
+    <Compile Include="NFe\belArma.cs" />
+    <Compile Include="NFe\belBusca.cs" />
+    <Compile Include="NFe\belCampoPesquisa.cs" />
+    <Compile Include="NFe\belCertificadoDigital.cs" />
+    <Compile Include="NFe\belCobr.cs" />
+    <Compile Include="NFe\belCofins.cs" />
+    <Compile Include="NFe\belCofinsaliq.cs" />
+    <Compile Include="NFe\belCofinsnt.cs" />
+    <Compile Include="NFe\belCofinsoutr.cs" />
+    <Compile Include="NFe\belCofinsqtde.cs" />
+    <Compile Include="NFe\belCofinsst.cs" />
+    <Compile Include="NFe\belComp.cs" />
+    <Compile Include="NFe\belCompra.cs" />
+    <Compile Include="NFe\belConfigInicial.cs" />
+    <Compile Include="NFe\belConsultaCadastro.cs" />
+    <Compile Include="NFe\belCriptografia.cs" />
+    <Compile Include="NFe\belDest.cs" />
+    <Compile Include="NFe\belDet.cs" />
+    <Compile Include="NFe\belDI.cs" />
+    <Compile Include="NFe\belDup.cs" />
+    <Compile Include="NFe\belDuplicata.cs" />
+    <Compile Include="NFe\belEmail.cs" />
+    <Compile Include="NFe\belEmailContador.cs" />
+    <Compile Include="NFe\belEmit.cs" />
+    <Compile Include="NFe\belEndEnt.cs" />
+    <Compile Include="NFe\belEscrituracao.cs" />
+    <Compile Include="NFe\belExporta.cs" />
+    <Compile Include="NFe\belFat.cs" />
+    <Compile Include="NFe\belFrete.cs" />
+    <Compile Include="NFe\belIcms.cs" />
+    <Compile Include="NFe\belIcms00.cs" />
+    <Compile Include="NFe\belIcms10.cs" />
+    <Compile Include="NFe\belIcms20.cs" />
+    <Compile Include="NFe\belIcms30.cs" />
+    <Compile Include="NFe\belIcms40.cs" />
+    <Compile Include="NFe\belIcms41.cs" />
+    <Compile Include="NFe\belIcms50.cs" />
+    <Compile Include="NFe\belIcms51.cs" />
+    <Compile Include="NFe\belIcms60.cs" />
+    <Compile Include="NFe\belIcms70.cs" />
+    <Compile Include="NFe\belIcms90.cs" />
+    <Compile Include="NFe\belICMSPart.cs" />
+    <Compile Include="NFe\belICMSSN101.cs" />
+    <Compile Include="NFe\belICMSSN102.cs" />
+    <Compile Include="NFe\belICMSSN201.cs" />
+    <Compile Include="NFe\belICMSSN500.cs" />
+    <Compile Include="NFe\belICMSSN900.cs" />
+    <Compile Include="NFe\belICMSST.cs" />
+    <Compile Include="NFe\belIcmstot.cs" />
+    <Compile Include="NFe\belIde.cs" />
+    <Compile Include="NFe\belIi.cs" />
+    <Compile Include="NFe\belImportaEscritor.cs" />
+    <Compile Include="NFe\belImportaXmlNFe.cs" />
+    <Compile Include="NFe\belImposto.cs" />
+    <Compile Include="NFe\belInfAdic.cs" />
+    <Compile Include="NFe\belInfadprod.cs" />
+    <Compile Include="NFe\belinfProt.cs" />
+    <Compile Include="NFe\belIpi.cs" />
+    <Compile Include="NFe\belIpint.cs" />
+    <Compile Include="NFe\belIpitrib.cs" />
+    <Compile Include="NFe\belIss.cs" />
+    <Compile Include="NFe\belIssqntot.cs" />
+    <Compile Include="NFe\belItens.cs" />
+    <Compile Include="NFe\belLacres.cs" />
+    <Compile Include="NFe\belMed.cs" />
+    <Compile Include="NFe\belNfeCancelamento.cs" />
+    <Compile Include="NFe\belNfeConsultaNF.cs" />
+    <Compile Include="NFe\belNfeInutilizacao.cs" />
+    <Compile Include="NFe\belNfeRecepcao.cs" />
+    <Compile Include="NFe\belNfeRetRecepcao.cs" />
+    <Compile Include="NFe\belnfeStatusServicoNF.cs" />
+    <Compile Include="NFe\belNFref.cs" />
+    <Compile Include="NFe\belNumeroNF.cs" />
+    <Compile Include="NFe\belObsCont.cs" />
+    <Compile Include="NFe\belObsFisco.cs" />
+    <Compile Include="NFe\belPis.cs" />
+    <Compile Include="NFe\belPisaliq.cs" />
+    <Compile Include="NFe\belPisnt.cs" />
+    <Compile Include="NFe\belPisoutr.cs" />
+    <Compile Include="NFe\belPisqtde.cs" />
+    <Compile Include="NFe\belPisst.cs" />
+    <Compile Include="NFe\belProcessaNF.cs" />
+    <Compile Include="NFe\belProcRef.cs" />
+    <Compile Include="NFe\belProd.cs" />
+    <Compile Include="NFe\belprotNFe.cs" />
+    <Compile Include="NFe\belReboque.cs" />
+    <Compile Include="NFe\belReciboFazenda.cs" />
+    <Compile Include="NFe\belRetTransp.cs" />
+    <Compile Include="NFe\belRetTrib.cs" />
+    <Compile Include="NFe\belSignature.cs" />
+    <Compile Include="Static\belStatic.cs" />
+    <Compile Include="NFe\belTotal.cs" />
+    <Compile Include="NFe\belTransp.cs" />
+    <Compile Include="NFe\belTransportadora.cs" />
+    <Compile Include="NFe\belUF.cs" />
+    <Compile Include="NFe\belVeicprod.cs" />
+    <Compile Include="NFe\belVeicTransp.cs" />
+    <Compile Include="NFe\belVol.cs" />
+    <Compile Include="Barcode\IBarcode.cs" />
+    <Compile Include="NFe\IbelDuplicata.cs" />
+    <Compile Include="NFe\IbelNumeroNF.cs" />
+    <Compile Include="NFe\infNFe.cs" />
+    <Compile Include="NFe\NFe.cs" />
+    <Compile Include="NFe\PopulaDs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NFe\retirada.cs" />
+    <Compile Include="Symbologies\Blank.cs" />
+    <Compile Include="Symbologies\Codabar.cs" />
+    <Compile Include="Symbologies\Code11.cs" />
+    <Compile Include="Symbologies\Code128.cs" />
+    <Compile Include="Symbologies\Code39.cs" />
+    <Compile Include="Symbologies\Code93.cs" />
+    <Compile Include="Symbologies\EAN13.cs" />
+    <Compile Include="Symbologies\EAN8.cs" />
+    <Compile Include="Symbologies\Interleaved2of5.cs" />
+    <Compile Include="Symbologies\ISBN.cs" />
+    <Compile Include="Symbologies\ITF14.cs" />
+    <Compile Include="Symbologies\JAN13.cs" />
+    <Compile Include="Symbologies\MSI.cs" />
+    <Compile Include="Symbologies\Postnet.cs" />
+    <Compile Include="Symbologies\Standard2of5.cs" />
+    <Compile Include="Symbologies\UPCA.cs" />
+    <Compile Include="Symbologies\UPCE.cs" />
+    <Compile Include="Symbologies\UPCSupplement2.cs" />
+    <Compile Include="Symbologies\UPCSupplement5.cs" />
+    <Compile Include="NFe\Util.cs" />
+    <Compile Include="NFes\tcIdentificacaoOrgaoGerador.cs" />
+    <Compile Include="NFes\tcIdentificacaoPrestador.cs" />
+    <Compile Include="NFes\tcIdentificacaoRps.cs" />
+    <Compile Include="NFes\tcIdentificacaoTomador.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NFes\NFes.cd" />
+    <None Include="NFe\digNFe.cd" />
+    <None Include="Properties\DataSources\HLP.bel.NFe.belEmailContador.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DANFE\DANFE.csproj">
+      <Project>{71EB35F8-0441-421C-B765-7432D646AD04}</Project>
+      <Name>DANFE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HLP.WebService\HLP.WebService.csproj">
+      <Project>{A6301838-39B8-48E8-BC6F-1AC76C776565}</Project>
+      <Name>HLP.WebService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Msg_Padrao.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Msg_Padrao.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="http://www.portalfiscal.inf.br/nfe/wsdl/NfeInutilizacao" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="NfeInutilizacao" targetNamespace="http://www.portalfiscal.inf.br/nfe/wsdl/NfeInutilizacao" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://www.portalfiscal.inf.br/nfe/wsdl/NfeInutilizacao" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="nfeInutilizacaoNF">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="nfeCabecMsg" type="xs:string" />
+            <xs:element minOccurs="0" name="nfeDadosMsg" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="nfeInutilizacaoNFResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="nfeInutilizacaoNFResult" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </types>
+  <message name="nfeInutilizacaoNF">
+    <part name="parameters" element="tns:nfeInutilizacaoNF" />
+  </message>
+  <message name="nfeInutilizacaoNFResponse">
+    <part name="parameters" element="tns:nfeInutilizacaoNFResponse" />
+  </message>
+  <portType name="NfeInutilizacao">
+    <operation name="nfeInutilizacaoNF">
+      <input message="tns:nfeInutilizacaoNF" />
+      <output message="tns:nfeInutilizacaoNFResponse" />
+    </operation>
+  </portType>
+  <binding name="NfeInutilizacaoPortBinding" type="tns:NfeInutilizacao">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="nfeInutilizacaoNF">
+      <soap:operation soapAction="nfeInutilizacaoNF" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="NfeInutilizacao">
+    <port name="NfeInutilizacaoPort" binding="tns:NfeInutilizacaoPortBinding">
+      <soap:address location="https://producao.nfe.ms.gov.br:443/producao/services/NfeInutilizacao" />
+    </port>
+  </service>
+</definitions>

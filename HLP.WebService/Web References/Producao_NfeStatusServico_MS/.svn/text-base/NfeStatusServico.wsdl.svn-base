@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="http://www.portalfiscal.inf.br/nfe/wsdl/NfeStatusServico" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="NfeStatusServico" targetNamespace="http://www.portalfiscal.inf.br/nfe/wsdl/NfeStatusServico" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://www.portalfiscal.inf.br/nfe/wsdl/NfeStatusServico" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="nfeStatusServicoNF">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="nfeCabecMsg" type="xs:string" />
+            <xs:element minOccurs="0" name="nfeDadosMsg" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="nfeStatusServicoNFResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="nfeStatusServicoNFResult" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </types>
+  <message name="nfeStatusServicoNF">
+    <part name="parameters" element="tns:nfeStatusServicoNF" />
+  </message>
+  <message name="nfeStatusServicoNFResponse">
+    <part name="parameters" element="tns:nfeStatusServicoNFResponse" />
+  </message>
+  <portType name="NfeStatusServico">
+    <operation name="nfeStatusServicoNF">
+      <input message="tns:nfeStatusServicoNF" />
+      <output message="tns:nfeStatusServicoNFResponse" />
+    </operation>
+  </portType>
+  <binding name="NfeStatusServicoPortBinding" type="tns:NfeStatusServico">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="nfeStatusServicoNF">
+      <soap:operation soapAction="http://www.portalfiscal.inf.br/nfe/wsdl/NfeStatusServico/nfeStatusServicoNF" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="NfeStatusServico">
+    <port name="NfeStatusServicoPort" binding="tns:NfeStatusServicoPortBinding">
+      <soap:address location="https://producao.nfe.ms.gov.br:443/producao/services/NfeStatusServico" />
+    </port>
+  </service>
+</definitions>

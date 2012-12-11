@@ -1,0 +1,1709 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A6301838-39B8-48E8-BC6F-1AC76C776565}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HLP.WebService</RootNamespace>
+    <AssemblyName>HLP.WebService</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=2.0.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\FirebirdClient\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CTe_Homologacao_cteCancelamento\cteCancelamento.wsdl" />
+    <None Include="Web References\CTe_Homologacao_cteCancelamento\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CTe_Homologacao_cteConsulta\cteConsulta.wsdl" />
+    <None Include="Web References\CTe_Homologacao_cteConsulta\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CTe_Homologacao_cteInutilizacao\cteInutilizacao.wsdl" />
+    <None Include="Web References\CTe_Homologacao_cteInutilizacao\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CTe_Homologacao_cteRecepcao\cteRecepcao.wsdl" />
+    <None Include="Web References\CTe_Homologacao_cteRecepcao\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CTe_Homologacao_cteRetRecepcao\cteRetRecepcao.wsdl" />
+    <None Include="Web References\CTe_Homologacao_cteRetRecepcao\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CTe_Homologacao_cteStatusServico\cteStatusServico.wsdl" />
+    <None Include="Web References\CTe_Homologacao_cteStatusServico\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CTe_Producao_cteCancelamento\cteCancelamento.wsdl" />
+    <None Include="Web References\CTe_Producao_cteCancelamento\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CTe_Producao_cteConsulta\cteConsulta.wsdl" />
+    <None Include="Web References\CTe_Producao_cteConsulta\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CTe_Producao_cteInutilizacao\cteInutilizacao.wsdl" />
+    <None Include="Web References\CTe_Producao_cteInutilizacao\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CTe_Producao_cteRecepcao\cteRecepcao.wsdl" />
+    <None Include="Web References\CTe_Producao_cteRecepcao\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CTe_Producao_cteRetRecepcao\cteRetRecepcao.wsdl" />
+    <None Include="Web References\CTe_Producao_cteRetRecepcao\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CTe_Producao_cteStatusServico\cteStatusServico.wsdl" />
+    <None Include="Web References\CTe_Producao_cteStatusServico\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Itu_servicos_Homologacao\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Itu_servicos_Homologacao\ServiceGinfesImplService.wsdl" />
+    <None Include="Web References\Itu_servicos_Producao\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Itu_servicos_Producao\ServiceGinfesImplService.wsdl" />
+    <None Include="Web References\v2_Homologacao_NFeConsultaCadastro_SP\cadconsultacadastro.wsdl" />
+    <None Include="Web References\v2_Homologacao_NFeConsultaCadastro_SP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Homologacao_NFeCancelamento_SP\NfeCancelamento2.wsdl" />
+    <None Include="Web References\v2_Homologacao_NFeCancelamento_SP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Homologacao_NFeConsultaCadastro_MS\CadConsultaCadastro2.wsdl" />
+    <None Include="Web References\v2_Homologacao_NFeConsultaCadastro_MS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Homologacao_NFeCancelamento_MS\NfeCancelamento2.wsdl" />
+    <None Include="Web References\v2_Homologacao_NFeCancelamento_MS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Homologacao_NFeConsulta_MS\NfeConsulta2.wsdl" />
+    <None Include="Web References\v2_Homologacao_NFeConsulta_MS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Homologacao_NFeConsulta_SP\NfeConsulta2.wsdl" />
+    <None Include="Web References\v2_Homologacao_NFeConsulta_SP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Homologacao_NFeInutilizacao_MS\NfeInutilizacao2.wsdl" />
+    <None Include="Web References\v2_Homologacao_NFeInutilizacao_MS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Homologacao_NFeInutilizacao_SP\NfeInutilizacao2.wsdl" />
+    <None Include="Web References\v2_Homologacao_NFeInutilizacao_SP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Homologacao_NFeRecepcaoEvento_SP\RecepcaoEvento.wsdl" />
+    <None Include="Web References\v2_Homologacao_NFeRecepcaoEvento_SP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Homologacao_NFeRecepcao_MS\NfeRecepcao2.wsdl" />
+    <None Include="Web References\v2_Homologacao_NFeRecepcao_MS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Homologacao_NFeCancelamento_RS\NfeCancelamento2.wsdl" />
+    <None Include="Web References\v2_Homologacao_NFeCancelamento_RS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Homologacao_NFeConsulta_RS\NfeConsulta2.wsdl" />
+    <None Include="Web References\v2_Homologacao_NFeConsulta_RS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Homologacao_NFeInutilizacao_RS\nfeinutilizacao2.wsdl" />
+    <None Include="Web References\v2_Homologacao_NFeInutilizacao_RS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Homologacao_NFeRecepcao_RS\NFeRecepcao2.wsdl" />
+    <None Include="Web References\v2_Homologacao_NFeRecepcao_RS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Homologacao_NFeRecepcao_SP\NfeRecepcao2.wsdl" />
+    <None Include="Web References\v2_Homologacao_NFeRecepcao_SP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Homologacao_NFeStatusServico_MS\NfeStatusServico2.wsdl" />
+    <None Include="Web References\v2_Homologacao_NFeStatusServico_MS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Homologacao_NFeStatusServico_RS\NfeStatusServico2.wsdl" />
+    <None Include="Web References\v2_Homologacao_NFeStatusServico_RS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Homologacao_NFeRetRecepacao_RS\NfeRetRecepcao2.wsdl" />
+    <None Include="Web References\v2_Homologacao_NFeRetRecepacao_RS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Homologacao_NFeRecepcao_RS\NFeRecepcao2.disco" />
+    <None Include="Web References\v2_Homologacao_NFeRetRecepacao_RS\NfeRetRecepcao2.disco" />
+    <None Include="Web References\v2_Homologacao_NFeCancelamento_RS\NfeCancelamento2.disco" />
+    <None Include="Web References\v2_Homologacao_NFeInutilizacao_RS\nfeinutilizacao2.disco" />
+    <None Include="Web References\v2_Homologacao_NFeConsulta_RS\NfeConsulta2.disco" />
+    <None Include="Web References\v2_Homologacao_NFeStatusServico_RS\NfeStatusServico2.disco" />
+    <None Include="Web References\v2_Homologacao_NFeStatusServico_SP\NfeStatusServico2.wsdl" />
+    <None Include="Web References\v2_Homologacao_NFeStatusServico_SP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Homologacao_NFeRetRecepcao_MS\NfeRetRecepcao2.wsdl" />
+    <None Include="Web References\v2_Homologacao_NFeRetRecepcao_MS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Homologacao_NFeRecepcaoEvento_RS\recepcaoevento.wsdl" />
+    <None Include="Web References\v2_Homologacao_NFeRecepcaoEvento_RS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeCancelamento_MS\NfeCancelamento2.wsdl" />
+    <None Include="Web References\v2_Producao_NFeCancelamento_MS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeCancelamento_RS\NfeCancelamento2.wsdl" />
+    <None Include="Web References\v2_Producao_NFeCancelamento_RS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeCancelamento_SP\nfecancelamento2.wsdl" />
+    <None Include="Web References\v2_Producao_NFeCancelamento_SP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeConsultaCadastro_MS\CadConsultaCadastro2.wsdl" />
+    <None Include="Web References\v2_Producao_NFeConsultaCadastro_MS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeConsultaCadastro_RS\cadconsultacadastro2.wsdl" />
+    <None Include="Web References\v2_Producao_NFeConsultaCadastro_RS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeConsulta_RS\NfeConsulta2.wsdl" />
+    <None Include="Web References\v2_Producao_NFeConsulta_RS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeConsultaCadastro_SP\cadconsultacadastro2.wsdl" />
+    <None Include="Web References\v2_Producao_NFeConsultaCadastro_SP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeConsulta_SP\nfeconsulta2.wsdl" />
+    <None Include="Web References\v2_Producao_NFeConsulta_SP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeConsulta_MS\NfeConsulta2.wsdl" />
+    <None Include="Web References\v2_Producao_NFeConsulta_MS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeInutilizacao_MS\NfeInutilizacao2.wsdl" />
+    <None Include="Web References\v2_Producao_NFeInutilizacao_MS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeInutilizacao_RS\nfeinutilizacao2.wsdl" />
+    <None Include="Web References\v2_Producao_NFeInutilizacao_RS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeInutilizacao_SP\nfeinutilizacao2.wsdl" />
+    <None Include="Web References\v2_Producao_NFeInutilizacao_SP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeRecepcaoEvento_MS\RecepcaoEvento.wsdl" />
+    <None Include="Web References\v2_Producao_NFeRecepcaoEvento_SP\RecepcaoEvento.wsdl" />
+    <None Include="Web References\v2_Producao_NFeRecepcaoEvento_SP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeRecepcaoEvento_MS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeRecepcaoEvento_RS\recepcaoevento.wsdl" />
+    <None Include="Web References\v2_Producao_NFeRecepcaoEvento_RS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeRecepcao_MS\NfeRecepcao2.wsdl" />
+    <None Include="Web References\v2_Producao_NFeRecepcao_MS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeRecepcao_RS\NFeRecepcao2.wsdl" />
+    <None Include="Web References\v2_Producao_NFeRecepcao_RS\NFeRecepcao2.disco" />
+    <None Include="Web References\v2_Producao_NFeRecepcao_RS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeRecepcao_SP\nferecepcao2.wsdl" />
+    <None Include="Web References\v2_Producao_NFeRecepcao_SP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Homologacao_NfeRetRecepcao_SP\NfeRetRecepcao2.wsdl" />
+    <None Include="Web References\v2_Homologacao_NfeRetRecepcao_SP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeRetRecepcao_MS\NfeRetRecepcao2.wsdl" />
+    <None Include="Web References\v2_Producao_NFeRetRecepcao_MS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeRetRecepcao_RS\NfeRetRecepcao2.wsdl" />
+    <None Include="Web References\v2_Producao_NFeRetRecepcao_RS\NfeRetRecepcao2.disco" />
+    <None Include="Web References\v2_Producao_NFeRetRecepcao_RS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeCancelamento_RS\NfeCancelamento2.disco" />
+    <None Include="Web References\v2_Producao_NFeInutilizacao_RS\nfeinutilizacao2.disco" />
+    <None Include="Web References\v2_Producao_NFeConsulta_RS\NfeConsulta2.disco" />
+    <None Include="Web References\v2_Producao_NFeRetRecepcao_SP\nferetrecepcao2.wsdl" />
+    <None Include="Web References\v2_Producao_NFeRetRecepcao_SP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeStatusServico_MS\NfeStatusServico2.wsdl" />
+    <None Include="Web References\v2_Producao_NFeStatusServico_MS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeStatusServico_RS\NfeStatusServico2.wsdl" />
+    <None Include="Web References\v2_Producao_NFeStatusServico_RS\NfeStatusServico2.disco" />
+    <None Include="Web References\v2_Producao_NFeStatusServico_RS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeConsultaCadastro_RS\cadconsultacadastro2.disco" />
+    <None Include="Web References\v2_Producao_NFeRecepcao_SP\nferecepcao2.disco" />
+    <None Include="Web References\v2_Producao_NFeRetRecepcao_SP\nferetrecepcao2.disco" />
+    <None Include="Web References\v2_Producao_NFeCancelamento_SP\nfecancelamento2.disco" />
+    <None Include="Web References\v2_Producao_NFeInutilizacao_SP\nfeinutilizacao2.disco" />
+    <None Include="Web References\v2_Producao_NFeConsulta_SP\nfeconsulta2.disco" />
+    <None Include="Web References\v2_Producao_NFeStatusServico_SP\nfestatusservico2.wsdl" />
+    <None Include="Web References\v2_Producao_NFeStatusServico_SP\nfestatusservico2.disco" />
+    <None Include="Web References\v2_Producao_NFeStatusServico_SP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_Producao_NFeConsultaCadastro_SP\cadconsultacadastro2.disco" />
+    <None Include="Web References\v2_SCAN_Homologacao_NFeConsulta\NfeConsulta2.wsdl" />
+    <None Include="Web References\v2_SCAN_Homologacao_NFeConsulta\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_SCAN_Homologacao_NFeInutilizacao\NfeInutilizacao2.wsdl" />
+    <None Include="Web References\v2_SCAN_Homologacao_NFeInutilizacao\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_SCAN_Homologacao_NFeRecepcao\NfeRecepcao2.wsdl" />
+    <None Include="Web References\v2_SCAN_Homologacao_NFeRecepcao\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_SCAN_Homologacao_NFeRetRecepcao\NfeRetRecepcao2.wsdl" />
+    <None Include="Web References\v2_SCAN_Homologacao_NFeRetRecepcao\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_SCAN_Homologacao_NFeStatusServico\NfeStatusServico2.wsdl" />
+    <None Include="Web References\v2_SCAN_Homologacao_NFeStatusServico\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_SCAN_Homologacao_NFeCancelamento\NfeCancelamento2.wsdl" />
+    <None Include="Web References\v2_SCAN_Homologacao_NFeCancelamento\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_SCAN_Producao_NFeCancelamento\NfeCancelamento2.wsdl" />
+    <None Include="Web References\v2_SCAN_Producao_NFeCancelamento\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_SCAN_Producao_NFeConsulta\NfeConsulta2.wsdl" />
+    <None Include="Web References\v2_SCAN_Producao_NFeConsulta\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_SCAN_Producao_NFeInutilizacao\NfeInutilizacao2.wsdl" />
+    <None Include="Web References\v2_SCAN_Producao_NFeInutilizacao\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_SCAN_Producao_NFeRecepcao\NfeRecepcao2.disco" />
+    <None Include="Web References\v2_SCAN_Producao_NFeRecepcao\NfeRecepcao2.wsdl" />
+    <None Include="Web References\v2_SCAN_Producao_NFeRecepcao\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_SCAN_Producao_NFeRetRecepcao\NfeRetRecepcao2.wsdl" />
+    <None Include="Web References\v2_SCAN_Producao_NFeRetRecepcao\NfeRetRecepcao2.disco" />
+    <None Include="Web References\v2_SCAN_Producao_NFeRetRecepcao\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_SCAN_Producao_NFeCancelamento\NfeCancelamento2.disco" />
+    <None Include="Web References\v2_SCAN_Producao_NFeInutilizacao\NfeInutilizacao2.disco" />
+    <None Include="Web References\v2_SCAN_Producao_NFeConsulta\NfeConsulta2.disco" />
+    <None Include="Web References\v2_SCAN_Producao_NFeStatusServico\NFeStatusServico2.wsdl" />
+    <None Include="Web References\v2_SCAN_Producao_NFeStatusServico\NFeStatusServico2.disco" />
+    <None Include="Web References\v2_SCAN_Producao_NFeStatusServico\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\v2_SCAN_Homologacao_NFeRecepcao\NfeRecepcao2.disco" />
+    <None Include="Web References\v2_SCAN_Homologacao_NFeRetRecepcao\NfeRetRecepcao2.disco" />
+    <None Include="Web References\v2_SCAN_Homologacao_NFeCancelamento\NfeCancelamento2.disco" />
+    <None Include="Web References\v2_SCAN_Homologacao_NFeInutilizacao\NfeInutilizacao2.disco" />
+    <None Include="Web References\v2_SCAN_Homologacao_NFeConsulta\NfeConsulta2.disco" />
+    <None Include="Web References\v2_SCAN_Homologacao_NFeStatusServico\NfeStatusServico2.disco" />
+    <None Include="Web References\v2_Homologacao_NFeRecepcao_SP\NfeRecepcao2.disco" />
+    <None Include="Web References\v2_Homologacao_NfeRetRecepcao_SP\NfeRetRecepcao2.disco" />
+    <None Include="Web References\v2_Homologacao_NFeStatusServico_SP\NfeStatusServico2.disco" />
+    <None Include="Web References\v2_Homologacao_NFeCancelamento_SP\NfeCancelamento2.disco" />
+    <None Include="Web References\v2_Homologacao_NFeInutilizacao_SP\NfeInutilizacao2.disco" />
+    <None Include="Web References\v2_Homologacao_NFeConsulta_SP\NfeConsulta2.disco" />
+    <None Include="Web References\v2_Homologacao_NFeConsultaCadastro_SP\cadconsultacadastro.disco" />
+    <None Include="Web References\Ws_versionamento_Cliente\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Ws_versionamento_Cliente\Verisionamento.wsdl" />
+    <None Include="Web References\v2_Homologacao_NFeRecepcaoEvento_SP\RecepcaoEvento.disco" />
+    <None Include="Web References\v2_Homologacao_NFeRecepcaoEvento_RS\recepcaoevento.disco" />
+    <None Include="Web References\v2_Producao_NFeRecepcaoEvento_RS\recepcaoevento.disco" />
+    <None Include="Web References\v2_Producao_NFeRecepcaoEvento_SP\RecepcaoEvento.disco" />
+    <None Include="Web References\Ws_versionamento_Cliente\Verisionamento.disco" />
+    <None Include="Web References\CTe_Homologacao_cteRecepcao\cteRecepcao.disco" />
+    <None Include="Web References\CTe_Homologacao_cteRetRecepcao\cteRetRecepcao.disco" />
+    <None Include="Web References\CTe_Homologacao_cteCancelamento\cteCancelamento.disco" />
+    <None Include="Web References\CTe_Homologacao_cteConsulta\cteConsulta.disco" />
+    <None Include="Web References\CTe_Homologacao_cteInutilizacao\cteInutilizacao.disco" />
+    <None Include="Web References\CTe_Homologacao_cteStatusServico\cteStatusServico.disco" />
+    <None Include="Web References\CTe_Producao_cteRecepcao\cteRecepcao.disco" />
+    <None Include="Web References\CTe_Producao_cteRetRecepcao\cteRetRecepcao.disco" />
+    <None Include="Web References\CTe_Producao_cteStatusServico\cteStatusServico.disco" />
+    <None Include="Web References\CTe_Producao_cteCancelamento\cteCancelamento.disco" />
+    <None Include="Web References\CTe_Producao_cteInutilizacao\cteInutilizacao.disco" />
+    <None Include="Web References\CTe_Producao_cteConsulta\cteConsulta.disco" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web References\CTe_Homologacao_cteCancelamento\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CTe_Homologacao_cteConsulta\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CTe_Homologacao_cteInutilizacao\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CTe_Homologacao_cteRecepcao\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CTe_Homologacao_cteRetRecepcao\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CTe_Homologacao_cteStatusServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CTe_Producao_cteCancelamento\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CTe_Producao_cteConsulta\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CTe_Producao_cteInutilizacao\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CTe_Producao_cteRecepcao\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CTe_Producao_cteRetRecepcao\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CTe_Producao_cteStatusServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Itu_servicos_Homologacao\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Itu_servicos_Producao\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Homologacao_NFeConsultaCadastro_SP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Homologacao_NFeCancelamento_SP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Homologacao_NFeConsultaCadastro_MS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Homologacao_NFeCancelamento_MS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Homologacao_NFeConsulta_MS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Homologacao_NFeConsulta_SP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Homologacao_NFeInutilizacao_MS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Homologacao_NFeInutilizacao_SP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Homologacao_NFeRecepcaoEvento_SP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Homologacao_NFeRecepcao_MS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Homologacao_NFeCancelamento_RS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Homologacao_NFeConsulta_RS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Homologacao_NFeInutilizacao_RS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Homologacao_NFeRecepcao_RS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Homologacao_NFeRecepcao_SP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Homologacao_NFeStatusServico_MS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Homologacao_NFeStatusServico_RS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Homologacao_NFeRetRecepacao_RS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Homologacao_NFeStatusServico_SP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Homologacao_NFeRetRecepcao_MS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Homologacao_NFeRecepcaoEvento_RS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Producao_NFeCancelamento_MS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Producao_NFeCancelamento_RS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Producao_NFeCancelamento_SP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Producao_NFeConsultaCadastro_MS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Producao_NFeConsultaCadastro_RS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Producao_NFeConsulta_RS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Producao_NFeConsultaCadastro_SP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Producao_NFeConsulta_SP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Producao_NFeConsulta_MS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Producao_NFeInutilizacao_MS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Producao_NFeInutilizacao_RS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Producao_NFeInutilizacao_SP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Producao_NFeRecepcaoEvento_SP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Producao_NFeRecepcaoEvento_MS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Producao_NFeRecepcaoEvento_RS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Producao_NFeRecepcao_MS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Producao_NFeRecepcao_RS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Producao_NFeRecepcao_SP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Homologacao_NfeRetRecepcao_SP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Producao_NFeRetRecepcao_MS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Producao_NFeRetRecepcao_RS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Producao_NFeRetRecepcao_SP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Producao_NFeStatusServico_MS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Producao_NFeStatusServico_RS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_Producao_NFeStatusServico_SP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_SCAN_Homologacao_NFeConsulta\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_SCAN_Homologacao_NFeInutilizacao\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_SCAN_Homologacao_NFeRecepcao\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_SCAN_Homologacao_NFeRetRecepcao\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_SCAN_Homologacao_NFeStatusServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_SCAN_Homologacao_NFeCancelamento\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_SCAN_Producao_NFeCancelamento\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_SCAN_Producao_NFeConsulta\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_SCAN_Producao_NFeInutilizacao\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_SCAN_Producao_NFeRecepcao\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_SCAN_Producao_NFeRetRecepcao\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\v2_SCAN_Producao_NFeStatusServico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Ws_versionamento_Cliente\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://187.75.170.94/Versionamento/Verisionamento.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Ws_versionamento_Cliente\</RelPath>
+      <UpdateFromURL>http://187.75.170.94/Versionamento/Verisionamento.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_Ws_versionamento_Cliente_Verisionamento</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://hom.nfe.fazenda.gov.br/SCAN/NfeCancelamento2/NfeCancelamento2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_SCAN_Homologacao_NFeCancelamento\</RelPath>
+      <UpdateFromURL>https://hom.nfe.fazenda.gov.br/SCAN/NfeCancelamento2/NfeCancelamento2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_SCAN_Producao_NFeCancelamento1_NfeCancelamento2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://hom.nfe.fazenda.gov.br/SCAN/NfeConsulta2/NfeConsulta2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_SCAN_Homologacao_NFeConsulta\</RelPath>
+      <UpdateFromURL>https://hom.nfe.fazenda.gov.br/SCAN/NfeConsulta2/NfeConsulta2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_SCAN_Homologacao_NFeConsulta_NfeConsulta2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://hom.nfe.fazenda.gov.br/SCAN/NfeInutilizacao2/NfeInutilizacao2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_SCAN_Homologacao_NFeInutilizacao\</RelPath>
+      <UpdateFromURL>https://hom.nfe.fazenda.gov.br/SCAN/NfeInutilizacao2/NfeInutilizacao2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_SCAN_Homologacao_NFeInutilizacao_NfeInutilizacao2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://hom.nfe.fazenda.gov.br/SCAN/NfeRecepcao2/NfeRecepcao2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_SCAN_Homologacao_NFeRecepcao\</RelPath>
+      <UpdateFromURL>https://hom.nfe.fazenda.gov.br/SCAN/NfeRecepcao2/NfeRecepcao2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_SCAN_Homologacao_NFeRecepcao_NfeRecepcao2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://hom.nfe.fazenda.gov.br/SCAN/NfeRetRecepcao2/NfeRetRecepcao2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_SCAN_Homologacao_NFeRetRecepcao\</RelPath>
+      <UpdateFromURL>https://hom.nfe.fazenda.gov.br/SCAN/NfeRetRecepcao2/NfeRetRecepcao2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_SCAN_Homologacao_NFeRetRecepcao_NfeRetRecepcao2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://hom.nfe.fazenda.gov.br/SCAN/NfeStatusServico2/NfeStatusServico2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_SCAN_Homologacao_NFeStatusServico\</RelPath>
+      <UpdateFromURL>https://hom.nfe.fazenda.gov.br/SCAN/NfeStatusServico2/NfeStatusServico2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_SCAN_Homologacao_NFeStatusServico_NfeStatusServico2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.ginfes.com.br/ServiceGinfesImpl%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Itu_servicos_Homologacao\</RelPath>
+      <UpdateFromURL>https://homologacao.ginfes.com.br/ServiceGinfesImpl%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_Itu_servicos_Homologacao_ServiceGinfesImplService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.fazenda.sp.gov.br/cteWEB/services/cteCancelamento.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CTe_Homologacao_cteCancelamento\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.fazenda.sp.gov.br/cteWEB/services/cteCancelamento.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_CTe_Homologacao_cteCancelamento_CteCancelamento</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.fazenda.sp.gov.br/cteWEB/services/cteConsulta.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CTe_Homologacao_cteConsulta\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.fazenda.sp.gov.br/cteWEB/services/cteConsulta.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_CTe_Homologacao_cteConsulta_CteConsulta</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.fazenda.sp.gov.br/cteWEB/services/cteInutilizacao.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CTe_Homologacao_cteInutilizacao\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.fazenda.sp.gov.br/cteWEB/services/cteInutilizacao.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_CTe_Homologacao_cteInutilizacao_CteInutilizacao</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.fazenda.sp.gov.br/cteWEB/services/cteRecepcao.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CTe_Homologacao_cteRecepcao\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.fazenda.sp.gov.br/cteWEB/services/cteRecepcao.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_Homologacao_cteRecepcao_CteRecepcao</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.fazenda.sp.gov.br/cteWEB/services/cteRetRecepcao.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CTe_Homologacao_cteRetRecepcao\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.fazenda.sp.gov.br/cteWEB/services/cteRetRecepcao.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_CTe_Homologacao_cteRetRecepcao_CteRetRecepcao</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.fazenda.sp.gov.br/cteWEB/services/cteStatusServico.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CTe_Homologacao_cteStatusServico\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.fazenda.sp.gov.br/cteWEB/services/cteStatusServico.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_CTe_Homologacao_cteStatusServico_CteStatusServico</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.fazenda.sp.gov.br/eventosWEB/services/RecepcaoEvento.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Homologacao_NFeRecepcaoEvento_SP\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.fazenda.sp.gov.br/eventosWEB/services/RecepcaoEvento.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Homologacao_NFeRecepcaoEvento_RecepcaoEvento</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.fazenda.sp.gov.br/nfeWEB/services/cadconsultacadastro.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Homologacao_NFeConsultaCadastro_SP\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.fazenda.sp.gov.br/nfeWEB/services/cadconsultacadastro.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Homologacao_NFeCadConsultaCadastro_SP_CadConsultaCadastro</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.fazenda.sp.gov.br/nfeweb/services/NfeCancelamento2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Homologacao_NFeCancelamento_SP\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.fazenda.sp.gov.br/nfeweb/services/NfeCancelamento2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Homologacao_NFeCancelamento_SP_NfeCancelamento2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.fazenda.sp.gov.br/nfeweb/services/NfeConsulta2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Homologacao_NFeConsulta_SP\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.fazenda.sp.gov.br/nfeweb/services/NfeConsulta2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Homologacao_NFeConsulta_SP_NfeConsulta2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.fazenda.sp.gov.br/nfeweb/services/NfeInutilizacao2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Homologacao_NFeInutilizacao_SP\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.fazenda.sp.gov.br/nfeweb/services/NfeInutilizacao2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Homologacao_NFeInutilizacao_SP_NfeInutilizacao2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.fazenda.sp.gov.br/nfeweb/services/NfeRecepcao2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Homologacao_NFeRecepcao_SP\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.fazenda.sp.gov.br/nfeweb/services/NfeRecepcao2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Homologacao_NFeRecepcao_SP_NfeRecepcao2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.fazenda.sp.gov.br/nfeweb/services/NfeRetRecepcao2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Homologacao_NfeRetRecepcao_SP\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.fazenda.sp.gov.br/nfeweb/services/NfeRetRecepcao2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NfeRetRecepcao_NfeRetRecepcao2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.fazenda.sp.gov.br/nfeweb/services/NfeStatusServico2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Homologacao_NFeStatusServico_SP\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.fazenda.sp.gov.br/nfeweb/services/NfeStatusServico2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Homologacao_NFeStatusServico_SP_NfeStatusServico2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.ms.gov.br/homologacao/services2/CadConsultaCadastro2%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Homologacao_NFeConsultaCadastro_MS\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.ms.gov.br/homologacao/services2/CadConsultaCadastro2%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Homologacao_NFeCadConsultaCadastro_MS_CadConsultaCadastro2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.ms.gov.br/homologacao/services2/NfeCancelamento2%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Homologacao_NFeCancelamento_MS\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.ms.gov.br/homologacao/services2/NfeCancelamento2%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2Homologacao_NFeCancelamento_NfeCancelamento2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.ms.gov.br/homologacao/services2/NfeConsulta2%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Homologacao_NFeConsulta_MS\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.ms.gov.br/homologacao/services2/NfeConsulta2%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Homologacao_NFeConsulta_MS_NfeConsulta2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.ms.gov.br/homologacao/services2/NfeInutilizacao2%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Homologacao_NFeInutilizacao_MS\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.ms.gov.br/homologacao/services2/NfeInutilizacao2%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Homologacao_NFeInutilizacao_MS_NfeInutilizacao2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.ms.gov.br/homologacao/services2/NfeRecepcao2%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Homologacao_NFeRecepcao_MS\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.ms.gov.br/homologacao/services2/NfeRecepcao2%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2Homologacao_NFeRecepcao_MS_NfeRecepcao2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.ms.gov.br/homologacao/services2/NfeRetRecepcao2%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Homologacao_NFeRetRecepcao_MS\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.ms.gov.br/homologacao/services2/NfeRetRecepcao2%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Homologacao_RetRecepcao_MS_NfeRetRecepcao2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.ms.gov.br/homologacao/services2/NfeStatusServico2%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Homologacao_NFeStatusServico_MS\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.ms.gov.br/homologacao/services2/NfeStatusServico2%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Homologacao_NFeStatusServico_MS_NfeStatusServico2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.sefaz.rs.gov.br/ws/NfeCancelamento/NfeCancelamento2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Homologacao_NFeCancelamento_RS\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.sefaz.rs.gov.br/ws/NfeCancelamento/NfeCancelamento2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_2_0_Homologacao_NFeCancelamento_NfeCancelamento2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.sefaz.rs.gov.br/ws/NfeConsulta/NfeConsulta2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Homologacao_NFeConsulta_RS\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.sefaz.rs.gov.br/ws/NfeConsulta/NfeConsulta2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_2_0_Homologacao_NFeConsulta_NfeConsulta2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.sefaz.rs.gov.br/ws/nfeinutilizacao/nfeinutilizacao2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Homologacao_NFeInutilizacao_RS\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.sefaz.rs.gov.br/ws/nfeinutilizacao/nfeinutilizacao2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_2_0_Homologacao_NFeInutilizacao_NfeInutilizacao2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.sefaz.rs.gov.br/ws/Nferecepcao/NFeRecepcao2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Homologacao_NFeRecepcao_RS\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.sefaz.rs.gov.br/ws/Nferecepcao/NFeRecepcao2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_2_0_Homologacao_NFeRecepcao_RS_NfeRecepcao2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.sefaz.rs.gov.br/ws/NfeRetRecepcao/NfeRetRecepcao2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Homologacao_NFeRetRecepacao_RS\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.sefaz.rs.gov.br/ws/NfeRetRecepcao/NfeRetRecepcao2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_2_0_Homologacao_NFe_RetRecepacao_NfeRetRecepcao2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.sefaz.rs.gov.br/ws/NfeStatusServico/NfeStatusServico2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Homologacao_NFeStatusServico_RS\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.sefaz.rs.gov.br/ws/NfeStatusServico/NfeStatusServico2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_2_0_Homologacao_NFeStatusServico_NfeStatusServico2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://homologacao.nfe.sefaz.rs.gov.br/ws/recepcaoevento/recepcaoevento.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Homologacao_NFeRecepcaoEvento_RS\</RelPath>
+      <UpdateFromURL>https://homologacao.nfe.sefaz.rs.gov.br/ws/recepcaoevento/recepcaoevento.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Homologacao_RecepcaoEvento_RS_RecepcaoEvento</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.fazenda.ms.gov.br/producao/services2/CadConsultaCadastro2%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Producao_NFeConsultaCadastro_MS\</RelPath>
+      <UpdateFromURL>https://nfe.fazenda.ms.gov.br/producao/services2/CadConsultaCadastro2%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NFeConsultaCadastro_MS_CadConsultaCadastro2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.fazenda.ms.gov.br/producao/services2/NfeCancelamento2%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Producao_NFeCancelamento_MS\</RelPath>
+      <UpdateFromURL>https://nfe.fazenda.ms.gov.br/producao/services2/NfeCancelamento2%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NFeCancelamento_MS_NfeCancelamento2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.fazenda.ms.gov.br/producao/services2/NfeConsulta2%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Producao_NFeConsulta_MS\</RelPath>
+      <UpdateFromURL>https://nfe.fazenda.ms.gov.br/producao/services2/NfeConsulta2%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NFeConsuta_MS_NfeConsulta2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.fazenda.ms.gov.br/producao/services2/NfeInutilizacao2%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Producao_NFeInutilizacao_MS\</RelPath>
+      <UpdateFromURL>https://nfe.fazenda.ms.gov.br/producao/services2/NfeInutilizacao2%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NFeInutilizacao_MS_NfeInutilizacao2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.fazenda.ms.gov.br/producao/services2/NfeRecepcao2%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Producao_NFeRecepcao_MS\</RelPath>
+      <UpdateFromURL>https://nfe.fazenda.ms.gov.br/producao/services2/NfeRecepcao2%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NFeRecepcao_MS_NfeRecepcao2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.fazenda.ms.gov.br/producao/services2/RecepcaoEvento%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Producao_NFeRecepcaoEvento_MS\</RelPath>
+      <UpdateFromURL>https://nfe.fazenda.ms.gov.br/producao/services2/RecepcaoEvento%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NFeRecepcaoEvento_MS_NfeRecepcaoEvento</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.fazenda.ms.gov.br/producao/services2/NfeRetRecepcao2%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Producao_NFeRetRecepcao_MS\</RelPath>
+      <UpdateFromURL>https://nfe.fazenda.ms.gov.br/producao/services2/NfeRetRecepcao2%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NFeRetRecepcao_MS_NfeRetRecepcao2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.fazenda.ms.gov.br/producao/services2/NfeStatusServico2%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Producao_NFeStatusServico_MS\</RelPath>
+      <UpdateFromURL>https://nfe.fazenda.ms.gov.br/producao/services2/NfeStatusServico2%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NFeStatusServico_MS_NfeStatusServico2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.fazenda.sp.gov.br/cteWEB/services/cteCancelamento.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CTe_Producao_cteCancelamento\</RelPath>
+      <UpdateFromURL>https://nfe.fazenda.sp.gov.br/cteWEB/services/cteCancelamento.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_CTe_Producao_cteCancelamento_CteCancelamento</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.fazenda.sp.gov.br/cteWEB/services/cteConsulta.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CTe_Producao_cteConsulta\</RelPath>
+      <UpdateFromURL>https://nfe.fazenda.sp.gov.br/cteWEB/services/cteConsulta.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_CTe_Producao_cteConsulta_CteConsulta</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.fazenda.sp.gov.br/cteWEB/services/cteInutilizacao.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CTe_Producao_cteInutilizacao\</RelPath>
+      <UpdateFromURL>https://nfe.fazenda.sp.gov.br/cteWEB/services/cteInutilizacao.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_CTe_Producao_cteInutilizacao_CteInutilizacao</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.fazenda.sp.gov.br/cteWEB/services/cteRecepcao.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CTe_Producao_cteRecepcao\</RelPath>
+      <UpdateFromURL>https://nfe.fazenda.sp.gov.br/cteWEB/services/cteRecepcao.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_CTe_Producao_cteRecepcao_CteRecepcao</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.fazenda.sp.gov.br/cteWEB/services/cteRetRecepcao.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CTe_Producao_cteRetRecepcao\</RelPath>
+      <UpdateFromURL>https://nfe.fazenda.sp.gov.br/cteWEB/services/cteRetRecepcao.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_CTe_Producao_cteRetRecepcao_CteRetRecepcao</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.fazenda.sp.gov.br/cteWEB/services/cteStatusServico.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CTe_Producao_cteStatusServico\</RelPath>
+      <UpdateFromURL>https://nfe.fazenda.sp.gov.br/cteWEB/services/cteStatusServico.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_CTe_Producao_cteStatusServico_CteStatusServico</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.fazenda.sp.gov.br/eventosWEB/services/RecepcaoEvento.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Producao_NFeRecepcaoEvento_SP\</RelPath>
+      <UpdateFromURL>https://nfe.fazenda.sp.gov.br/eventosWEB/services/RecepcaoEvento.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NFeRecepacaoEvento_SP_RecepcaoEvento</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.fazenda.sp.gov.br/nfeweb/services/cadconsultacadastro2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Producao_NFeConsultaCadastro_SP\</RelPath>
+      <UpdateFromURL>https://nfe.fazenda.sp.gov.br/nfeweb/services/cadconsultacadastro2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NFeConsulta_SP1_CadConsultaCadastro2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.fazenda.sp.gov.br/nfeweb/services/nfecancelamento2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Producao_NFeCancelamento_SP\</RelPath>
+      <UpdateFromURL>https://nfe.fazenda.sp.gov.br/nfeweb/services/nfecancelamento2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NFeCancelamento_SP_NfeCancelamento2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.fazenda.sp.gov.br/nfeweb/services/nfeconsulta2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Producao_NFeConsulta_SP\</RelPath>
+      <UpdateFromURL>https://nfe.fazenda.sp.gov.br/nfeweb/services/nfeconsulta2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NFeConsulta_SP_NfeConsulta2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.fazenda.sp.gov.br/nfeweb/services/nfeinutilizacao2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Producao_NFeInutilizacao_SP\</RelPath>
+      <UpdateFromURL>https://nfe.fazenda.sp.gov.br/nfeweb/services/nfeinutilizacao2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NFeInutilizacao_SP_NfeInutilizacao2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.fazenda.sp.gov.br/nfeweb/services/nferecepcao2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Producao_NFeRecepcao_SP\</RelPath>
+      <UpdateFromURL>https://nfe.fazenda.sp.gov.br/nfeweb/services/nferecepcao2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NFeRecepcao_SP_NfeRecepcao2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.fazenda.sp.gov.br/nfeweb/services/nferetrecepcao2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Producao_NFeRetRecepcao_SP\</RelPath>
+      <UpdateFromURL>https://nfe.fazenda.sp.gov.br/nfeweb/services/nferetrecepcao2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NFeRetRecepcao_SP_NfeRetRecepcao2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.fazenda.sp.gov.br/nfeweb/services/nfestatusservico2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Producao_NFeStatusServico_SP\</RelPath>
+      <UpdateFromURL>https://nfe.fazenda.sp.gov.br/nfeweb/services/nfestatusservico2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NFeStatusServico_SP_NfeStatusServico2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.sefaz.rs.gov.br/ws/NfeCancelamento/NfeCancelamento2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Producao_NFeCancelamento_RS\</RelPath>
+      <UpdateFromURL>https://nfe.sefaz.rs.gov.br/ws/NfeCancelamento/NfeCancelamento2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NFeCancelamento_RS_NfeCancelamento2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.sefaz.rs.gov.br/ws/NfeConsulta/NfeConsulta2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Producao_NFeConsulta_RS\</RelPath>
+      <UpdateFromURL>https://nfe.sefaz.rs.gov.br/ws/NfeConsulta/NfeConsulta2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NFeConsulta_RS_NfeConsulta2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.sefaz.rs.gov.br/ws/nfeinutilizacao/nfeinutilizacao2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Producao_NFeInutilizacao_RS\</RelPath>
+      <UpdateFromURL>https://nfe.sefaz.rs.gov.br/ws/nfeinutilizacao/nfeinutilizacao2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NFeInutilizacao_RS_NfeInutilizacao2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.sefaz.rs.gov.br/ws/Nferecepcao/NFeRecepcao2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Producao_NFeRecepcao_RS\</RelPath>
+      <UpdateFromURL>https://nfe.sefaz.rs.gov.br/ws/Nferecepcao/NFeRecepcao2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NFeRecepcao_RS_NfeRecepcao2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.sefaz.rs.gov.br/ws/NfeRetRecepcao/NfeRetRecepcao2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Producao_NFeRetRecepcao_RS\</RelPath>
+      <UpdateFromURL>https://nfe.sefaz.rs.gov.br/ws/NfeRetRecepcao/NfeRetRecepcao2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NFeRetRecepcao_RS_NfeRetRecepcao2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.sefaz.rs.gov.br/ws/NfeStatusServico/NfeStatusServico2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Producao_NFeStatusServico_RS\</RelPath>
+      <UpdateFromURL>https://nfe.sefaz.rs.gov.br/ws/NfeStatusServico/NfeStatusServico2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NFeStatusServico_RS_NfeStatusServico2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://nfe.sefaz.rs.gov.br/ws/recepcaoevento/recepcaoevento.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Producao_NFeRecepcaoEvento_RS\</RelPath>
+      <UpdateFromURL>https://nfe.sefaz.rs.gov.br/ws/recepcaoevento/recepcaoevento.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NFeRecepcaoEvento_RS_RecepcaoEvento</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://producao.ginfes.com.br/ServiceGinfesImpl%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Itu_servicos_Producao\</RelPath>
+      <UpdateFromURL>https://producao.ginfes.com.br/ServiceGinfesImpl%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_Itu_servicos_Producao_ServiceGinfesImplService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://sef.sefaz.rs.gov.br/ws/cadconsultacadastro/cadconsultacadastro2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_Producao_NFeConsultaCadastro_RS\</RelPath>
+      <UpdateFromURL>https://sef.sefaz.rs.gov.br/ws/cadconsultacadastro/cadconsultacadastro2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_Producao_NFeConsultaCadastro_RS_CadConsultaCadastro2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://www.scan.fazenda.gov.br/NfeCancelamento2/NfeCancelamento2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_SCAN_Producao_NFeCancelamento\</RelPath>
+      <UpdateFromURL>https://www.scan.fazenda.gov.br/NfeCancelamento2/NfeCancelamento2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_SCAN_Producao_NFeCancelamento_NfeCancelamento2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://www.scan.fazenda.gov.br/NfeConsulta2/NfeConsulta2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_SCAN_Producao_NFeConsulta\</RelPath>
+      <UpdateFromURL>https://www.scan.fazenda.gov.br/NfeConsulta2/NfeConsulta2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_SCAN_Producao_NFeConsulta_NfeConsulta2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://www.scan.fazenda.gov.br/NfeInutilizacao2/NfeInutilizacao2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_SCAN_Producao_NFeInutilizacao\</RelPath>
+      <UpdateFromURL>https://www.scan.fazenda.gov.br/NfeInutilizacao2/NfeInutilizacao2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_SCAN_Producao_NFeInutilizacao_NfeInutilizacao2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://www.scan.fazenda.gov.br/NfeRecepcao2/NfeRecepcao2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_SCAN_Producao_NFeRecepcao\</RelPath>
+      <UpdateFromURL>https://www.scan.fazenda.gov.br/NfeRecepcao2/NfeRecepcao2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_SCAN_NFeRecepcao_NfeRecepcao2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://www.scan.fazenda.gov.br/NfeRetRecepcao2/NfeRetRecepcao2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_SCAN_Producao_NFeRetRecepcao\</RelPath>
+      <UpdateFromURL>https://www.scan.fazenda.gov.br/NfeRetRecepcao2/NfeRetRecepcao2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_SCAN_Producao_NFeRetRecepcao_NfeRetRecepcao2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://www.scan.fazenda.gov.br/NFeStatusServico2/NFeStatusServico2.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\v2_SCAN_Producao_NFeStatusServico\</RelPath>
+      <UpdateFromURL>https://www.scan.fazenda.gov.br/NFeStatusServico2/NFeStatusServico2.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HLP_WebService_v2_SCAN_Producao_NFeStatusServico_NfeStatusServico2</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52525</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

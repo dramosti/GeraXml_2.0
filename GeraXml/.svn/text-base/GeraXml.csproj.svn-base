@@ -1,0 +1,1219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{27070C16-52EB-447E-B098-7AC33E6C7912}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GeraXml</RootNamespace>
+    <AssemblyName>GeraXml</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ApplicationIcon>XML.ico</ApplicationIcon>
+    <ApplicationIcon>XML.ico</ApplicationIcon>
+    <ManifestCertificateThumbprint>7F3795B1241F63D1F6DEBEA6067BBDA5A2821D33</ManifestCertificateThumbprint>
+    <ManifestKeyFile>GeraXml_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>ftp://ftp.hlp.com.br/public_html/NFe/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://www.hlp.com.br/NFe/</InstallUrl>
+    <SupportUrl>http://www.hlp.com.br</SupportUrl>
+    <ErrorReportUrl>http://www.hlp.com.br</ErrorReportUrl>
+    <TargetCulture>pt-BR</TargetCulture>
+    <ProductName>GeraXml 2.0</ProductName>
+    <PublisherName>HLP INFORMATICA 2011</PublisherName>
+    <SuiteName>HLP INFORMÁTICA</SuiteName>
+    <WebPage>nfe.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>125</ApplicationRevision>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>Custom</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AC.ExtendedRenderer.Toolkit">
+      <HintPath>..\DLL\AC.ExtendedRenderer.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>C:\Users\Andre.HLP\Desktop\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>C:\Users\Andre.HLP\Desktop\CrystalDecisions.ReportSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>C:\Users\Andre.HLP\Desktop\CrystalDecisions.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>C:\Users\Andre.HLP\Desktop\CrystalDecisions.Windows.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=2.0.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NfeGerarXml\bin\Debug\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="P_0_0_0.U_0">
+      <HintPath>G:\CSharp\Desenvolvimento\Projetos\Comum_DLL's\P_0_0_0.U_0.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="windows_net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\windows_net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CCs\frmBuscaCCe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CCs\frmBuscaCCe.Designer.cs">
+      <DependentUpon>frmBuscaCCe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmAtualizacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmAtualizacao.Designer.cs">
+      <DependentUpon>frmAtualizacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmAviso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmAviso.Designer.cs">
+      <DependentUpon>frmAviso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmConfiguracao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmConfiguracao.Designer.cs">
+      <DependentUpon>frmConfiguracao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmLocalXml.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmLocalXml.Designer.cs">
+      <DependentUpon>frmLocalXml.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmSelecionaConfigs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmSelecionaConfigs.Designer.cs">
+      <DependentUpon>frmSelecionaConfigs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CTe\frmCancJustCte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTe\frmCancJustCte.Designer.cs">
+      <DependentUpon>frmCancJustCte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CTe\frmEmailCte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTe\frmEmailCte.Designer.cs">
+      <DependentUpon>frmEmailCte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CTe\frmGerarArquivosCte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTe\frmGerarArquivosCte.designer.cs">
+      <DependentUpon>frmGerarArquivosCte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CTe\frmGerarNumeroCte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTe\frmGerarNumeroCte.designer.cs">
+      <DependentUpon>frmGerarNumeroCte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CTe\frmInutilizaFaixaCte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTe\frmInutilizaFaixaCte.Designer.cs">
+      <DependentUpon>frmInutilizaFaixaCte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CTe\frmRelatorioCte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTe\frmRelatorioCte.Designer.cs">
+      <DependentUpon>frmRelatorioCte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CTe\frmVisualizaCte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTe\frmVisualizaCte.designer.cs">
+      <DependentUpon>frmVisualizaCte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HLPexception.cs" />
+    <Compile Include="hlpMessageBox.cs" />
+    <Compile Include="NFes\frmCancelamentoNfs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFes\frmCancelamentoNfs.Designer.cs">
+      <DependentUpon>frmCancelamentoNfs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFes\frmEnviaNfs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFes\frmEnviaNfs.Designer.cs">
+      <DependentUpon>frmEnviaNfs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFes\frmStatusEnvioNfs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFes\frmStatusEnvioNfs.Designer.cs">
+      <DependentUpon>frmStatusEnvioNfs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFes\frmVisualizaNfs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFes\frmVisualizaNfs.Designer.cs">
+      <DependentUpon>frmVisualizaNfs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFe\frmArquivosXmlNfe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFe\frmArquivosXmlNfe.Designer.cs">
+      <DependentUpon>frmArquivosXmlNfe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFe\frmBuscaRetorno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFe\frmBuscaRetorno.Designer.cs">
+      <DependentUpon>frmBuscaRetorno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFe\frmCancJustNfe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFe\frmCancJustNfe.Designer.cs">
+      <DependentUpon>frmCancJustNfe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFe\frmContratoContingenciaNfe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFe\frmContratoContingenciaNfe.Designer.cs">
+      <DependentUpon>frmContratoContingenciaNfe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFe\frmDeclaracaoImportacaoNfe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFe\frmDeclaracaoImportacaoNfe.Designer.cs">
+      <DependentUpon>frmDeclaracaoImportacaoNfe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFe\frmEmailContadorNfe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFe\frmEmailContadorNfe.Designer.cs">
+      <DependentUpon>frmEmailContadorNfe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFe\frmEmailNfe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFe\frmEmailNfe.Designer.cs">
+      <DependentUpon>frmEmailNfe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFe\frmGerarNumeroNfe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFe\frmGerarNumeroNfe.Designer.cs">
+      <DependentUpon>frmGerarNumeroNfe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFe\frmImportaEscritorNfe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFe\frmImportaEscritorNfe.Designer.cs">
+      <DependentUpon>frmImportaEscritorNfe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFe\frmInutilizaNFecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFe\frmInutilizaNFecs.Designer.cs">
+      <DependentUpon>frmInutilizaNFecs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFe\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFe\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFe\frmLoginConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFe\frmLoginConfig.Designer.cs">
+      <DependentUpon>frmLoginConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFe\frmProtocolosNfe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFe\frmProtocolosNfe.Designer.cs">
+      <DependentUpon>frmProtocolosNfe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFe\frmVisualizaNotasNfe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFe\frmVisualizaNotasNfe.Designer.cs">
+      <DependentUpon>frmVisualizaNotasNfe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFe\MaskedEditColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NFe\MaskedEditColumn.designer.cs">
+      <DependentUpon>MaskedEditColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFe\PesquisaNfe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFe\PesquisaNfe.designer.cs">
+      <DependentUpon>PesquisaNfe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFe\relAvisoContingencia.cs">
+      <DependentUpon>relAvisoContingencia.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Principal\frmGerarXml.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\frmGerarXml.Designer.cs">
+      <DependentUpon>frmGerarXml.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CCs\frmBuscaCCe.resx">
+      <DependentUpon>frmBuscaCCe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmAtualizacao.resx">
+      <DependentUpon>frmAtualizacao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmAviso.resx">
+      <DependentUpon>frmAviso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmConfiguracao.resx">
+      <DependentUpon>frmConfiguracao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmLocalXml.resx">
+      <DependentUpon>frmLocalXml.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmSelecionaConfigs.resx">
+      <DependentUpon>frmSelecionaConfigs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CTe\frmCancJustCte.resx">
+      <DependentUpon>frmCancJustCte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CTe\frmEmailCte.resx">
+      <DependentUpon>frmEmailCte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CTe\frmGerarArquivosCte.resx">
+      <DependentUpon>frmGerarArquivosCte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CTe\frmGerarNumeroCte.resx">
+      <DependentUpon>frmGerarNumeroCte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CTe\frmInutilizaFaixaCte.resx">
+      <DependentUpon>frmInutilizaFaixaCte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CTe\frmRelatorioCte.resx">
+      <DependentUpon>frmRelatorioCte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CTe\frmVisualizaCte.resx">
+      <DependentUpon>frmVisualizaCte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFes\frmCancelamentoNfs.resx">
+      <DependentUpon>frmCancelamentoNfs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFes\frmEnviaNfs.resx">
+      <DependentUpon>frmEnviaNfs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFes\frmStatusEnvioNfs.resx">
+      <DependentUpon>frmStatusEnvioNfs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFes\frmVisualizaNfs.resx">
+      <DependentUpon>frmVisualizaNfs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFe\frmArquivosXmlNfe.resx">
+      <DependentUpon>frmArquivosXmlNfe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFe\frmBuscaRetorno.resx">
+      <DependentUpon>frmBuscaRetorno.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFe\frmCancJustNfe.resx">
+      <DependentUpon>frmCancJustNfe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFe\frmContratoContingenciaNfe.resx">
+      <DependentUpon>frmContratoContingenciaNfe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFe\frmDeclaracaoImportacaoNfe.resx">
+      <DependentUpon>frmDeclaracaoImportacaoNfe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFe\frmEmailContadorNfe.resx">
+      <DependentUpon>frmEmailContadorNfe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFe\frmEmailNfe.resx">
+      <DependentUpon>frmEmailNfe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFe\frmGerarNumeroNfe.resx">
+      <DependentUpon>frmGerarNumeroNfe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFe\frmImportaEscritorNfe.resx">
+      <DependentUpon>frmImportaEscritorNfe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFe\frmInutilizaNFecs.resx">
+      <DependentUpon>frmInutilizaNFecs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFe\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFe\frmLoginConfig.resx">
+      <DependentUpon>frmLoginConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFe\frmProtocolosNfe.resx">
+      <DependentUpon>frmProtocolosNfe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFe\frmVisualizaNotasNfe.resx">
+      <DependentUpon>frmVisualizaNotasNfe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFe\PesquisaNfe.resx">
+      <DependentUpon>PesquisaNfe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFe\relAvisoContingencia.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>relAvisoContingencia.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\frmGerarXml.resx">
+      <DependentUpon>frmGerarXml.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="1323422830_file_xml.ico" />
+    <Content Include="icone hlp.ico" />
+    <Content Include="Relatorios\RelDanfeContingencia.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RelDanfeContingencia.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Relatorios\RelDanfeCancelados.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RelDanfeCancelados.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Relatorios\RelDanfe.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RelDanfe.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Relatorios\RelDanfePaisagem.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RelDanfePaisagem.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Relatorios\CCe.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CCe.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Relatorios\rptCtePadrao.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCtePadrao1.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Relatorios\rptCteLotacao.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCteLotacao.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Relatorios\rptCteLotacaoCancelado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCteLotacaoCancelado.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Relatorios\rptCtePadraoCancelado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCtePadraoCancelado.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Relatorios\RelDanfeSimplificada.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RelDanfeSimplificada.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="GeraXml_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\HLP.bel.belNFref.datasource" />
+    <None Include="Resources\Logo4.jpg" />
+    <None Include="Resources\visual.ico" />
+    <None Include="Resources\config.ico" />
+    <None Include="Resources\protocolo.ico" />
+    <None Include="Resources\folder.ico" />
+    <None Include="Resources\carta.ico" />
+    <None Include="Resources\nfeLogo.png" />
+    <None Include="Resources\import.ico" />
+    <None Include="Resources\xml %282%29.ico" />
+    <None Include="Resources\users.ico" />
+    <None Include="Resources\status.png" />
+    <None Include="Resources\xml.ico" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\sair.ico" />
+    <None Include="Resources\key.ico" />
+    <None Include="Resources\pesq_verd.png" />
+    <None Include="Resources\send.ico" />
+    <None Include="Resources\refresh.ico" />
+    <None Include="Resources\ultimo %284%29.png" />
+    <None Include="Resources\situacao.png" />
+    <None Include="Resources\sair.png" />
+    <None Include="Resources\retorno.png" />
+    <None Include="Resources\print.png" />
+    <None Include="Resources\primeiro %282%29.png" />
+    <None Include="Resources\pesquisar.png" />
+    <None Include="Resources\inutilzar.png" />
+    <None Include="Resources\esquerda.png" />
+    <None Include="Resources\email.png" />
+    <None Include="Resources\direita - Cópia.png" />
+    <None Include="Resources\confirmar.png" />
+    <None Include="Resources\cancel %283%29.png" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\Internet xml.png" />
+    <None Include="Resources\pdf.png" />
+    <None Include="Resources\cliente.ico" />
+    <Content Include="Schema\CCe\CCe_v1.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CCe\envCCe_v1.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CCe\leiauteCCe_v1.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CCe\procCCeNFe_v1.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CCe\retEnvCCe_v1.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CCe\tiposBasico_v1.03.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CCe\tmp0000.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CCe\xmldsig-core-schema_v1.01.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\cancNFe_v2.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\consCad_v2.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\consReciNFe_v2.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\consSitNFe_v2.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\consStatServ_v2.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\enviNFe_v2.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\inutNFe_v2.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\leiauteCancNFe_v2.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\leiauteConsSitNFe_v2.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\leiauteConsStatServ_v2.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\leiauteConsultaCadastro_v2.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\leiauteInutNFe_v2.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\leiauteNFe_v2.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\nfe_v2.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\procCancNFe_v2.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\procInutNFe_v2.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\procNFe_v2.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\retCancNFe_v2.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\retConsCad_v2.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\retConsReciNFe_v2.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\retConsSitNFe_v2.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\retConsStatServ_v2.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\retEnviNFe_v2.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\retInutNFe_v2.00.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\tiposBasico_v1.03.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\xmldsig-core-schema_v1.01.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe-s\cabecalho_v03.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe-s\servico_cancelar_nfse_envio_v02.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe-s\servico_cancelar_nfse_envio_v03.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe-s\servico_cancelar_nfse_resposta_v03.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe-s\servico_consultar_lote_rps_envio_v03.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe-s\servico_consultar_lote_rps_resposta_v03.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe-s\servico_consultar_nfse_envio_v03.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe-s\servico_consultar_nfse_resposta_v03.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe-s\servico_consultar_nfse_rps_envio_v03.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe-s\servico_consultar_nfse_rps_resposta_v03.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe-s\servico_consultar_situacao_lote_rps_envio_v03.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe-s\servico_consultar_situacao_lote_rps_resposta_v03.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe-s\servico_enviar_lote_rps_envio_v03.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe-s\servico_enviar_lote_rps_resposta_v03.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe-s\tipos_v03.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe-s\xmldsig-core-schema20020212_v03.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML.ico" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Relatorios\CCe.cs">
+      <DependentUpon>CCe.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Relatorios\RelDanfeSimplificada.cs">
+      <DependentUpon>RelDanfeSimplificada.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Relatorios\rptCtePadraoCancelado.cs">
+      <DependentUpon>rptCtePadraoCancelado.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Relatorios\rptCteLotacaoCancelado.cs">
+      <DependentUpon>rptCteLotacaoCancelado.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Relatorios\rptCteLotacao.cs">
+      <DependentUpon>rptCteLotacao.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Relatorios\rptCtePadrao1.cs">
+      <DependentUpon>rptCtePadrao.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Relatorios\RelDanfe.cs">
+      <DependentUpon>RelDanfe.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Relatorios\RelDanfeCancelados.cs">
+      <DependentUpon>RelDanfeCancelados.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Relatorios\RelDanfeContingencia.cs">
+      <DependentUpon>RelDanfeContingencia.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Relatorios\RelDanfePaisagem.cs">
+      <DependentUpon>RelDanfePaisagem.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Content Include="Schema\CTe\cancCteTiposBasico_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\cancCte_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\consReciCteTiposBasico_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\consReciCte_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\consSitCteTiposBasico_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\consSitCte_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\consStatServCte_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\consStatServTiposBasico_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\cteModalAereo_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\cteModalAquaviario_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\cteModalDutoviario_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\cteModalFerroviario_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\cteModalRodoviario_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\cteTiposBasico_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\cte_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\enviCte_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\inutCteTiposBasico_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\inutCte_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\procCancCTe_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\procCTe_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\procInutCTe_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\retCancCte_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\retConsReciCte_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\retConsSitCte_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\retConsStatServCte_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\retEnviCte_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\retInutCte_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\tiposGeralCTe_v1.04.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\CTe\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\2.03\consSitNFe_v2.01.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\2.03\leiauteConsSitNFe_v2.01.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\2.03\retConsSitNFe_v2.01.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\2.03\tiposBasico_v1.03.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Schema\NFe\2.03\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DANFE\DANFE.csproj">
+      <Project>{71EB35F8-0441-421C-B765-7432D646AD04}</Project>
+      <Name>DANFE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HLP.bel\HLP.bel.csproj">
+      <Project>{24E3C2DC-DA18-4DF1-BC64-9CCE5D2F2E9A}</Project>
+      <Name>HLP.bel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HLP.Dao\HLP.Dao.csproj">
+      <Project>{0AF0D052-6188-4FC4-A9A5-26C30C068FA0}</Project>
+      <Name>HLP.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HLP.WebService\HLP.WebService.csproj">
+      <Project>{A6301838-39B8-48E8-BC6F-1AC76C776565}</Project>
+      <Name>HLP.WebService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="ComponentFactory.Krypton.Toolkit">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.CrystalReports.Engine">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ClientDoc">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommLayer">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonControls">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Controllers">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CubeDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataSetConversion">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ObjectFactory">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Prompting">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ReportDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.XmlSerialize">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportSource">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Shared">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Windows.Forms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="FirebirdSql.Data.FirebirdClient">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="log4net">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="stdole">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

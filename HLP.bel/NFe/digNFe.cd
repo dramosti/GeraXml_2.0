@@ -1,0 +1,550 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HLP.bel.belNFe" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NFe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belInfNFe" Collapsed="true">
+    <Position X="2.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iBECAAAAAQlgAABDBChEAAYAABAAAAFAAEAAwAgBkgA=</HashCode>
+      <FileName>infNFe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belIde" Collapsed="true">
+    <Position X="4.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KywABgIBAACCAAAAGAAiAEEhRAQAASSEAAABSYjAEEk=</HashCode>
+      <FileName>belIde.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belEmit" Collapsed="true">
+    <Position X="4.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAIHIxAABAARUEAgBAAEAAEAWgAEBAEkCBBQCERgA=</HashCode>
+      <FileName>belEmit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belAvulsa" Collapsed="true">
+    <Position X="4.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwAAIEIAAAJIAABAAIIAAQAAAAQAAAEAAIACAQBATAA=</HashCode>
+      <FileName>avulsa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belDest" Collapsed="true">
+    <Position X="4.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAIDIgAAAAARUkAABAAEABEAUgAEBAEkCBAQKARgA=</HashCode>
+      <FileName>belDest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belRetirada" Collapsed="true">
+    <Position X="4.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAIDIAAAAAAQEAAAAAAAAAEAQAAABAEECBAAAAQgA=</HashCode>
+      <FileName>retirada.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belDet" Collapsed="true">
+    <Position X="4.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAQAAAAAAAAAAABAAAAAAAEIAAAAAAAACAAAAAhAAA=</HashCode>
+      <FileName>belDet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belProd" Collapsed="true">
+    <Position X="6.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CgQAlABAIAggAgRCDhACYQIKRAGABAYAAAIAgCgQkgA=</HashCode>
+      <FileName>belProd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belVeicprod" Collapsed="true">
+    <Position X="8.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AECEgEwUBAAFAeAAAKSgBCMAAAKIAAAQQBAQAhA0SsA=</HashCode>
+      <FileName>belVeicprod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belMed" Collapsed="true">
+    <Position X="8.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAgAAAAAAAIAABAAAAAAACAAAAAAAAAAEAABAIAARAA=</HashCode>
+      <FileName>belMed.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belArma" Collapsed="true">
+    <Position X="8.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEACAAAAAAAAAAACCAAAAAEAAAAAAAAAAQQAAAAAA=</HashCode>
+      <FileName>belArma.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belComp" Collapsed="true">
+    <Position X="8.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BwAAADAYGBAQAIAkAIgEAAAAQAgAgAAAQBRAEIAAAAA=</HashCode>
+      <FileName>belComp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belImposto" Collapsed="true">
+    <Position X="6.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABABABAACBBQIAAAAAAgAAAAAAAAAAAUAAAAAAA=</HashCode>
+      <FileName>belImposto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belIcms" Collapsed="true">
+    <Position X="8.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAGAAIAAQCAAAAAAIBAAAAAIAAAAAAAGASEQAAABA=</HashCode>
+      <FileName>belIcms.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belIcms00" Collapsed="true">
+    <Position X="10" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAGgAAAAAAAAAIFBAAAAEAAAEAAAAAAAAIAAgAA=</HashCode>
+      <FileName>belIcms00.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belIcms10" Collapsed="true">
+    <Position X="10" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAGoACAgAACA0IFBAAAAEApAEAAAgAAAEIAAgAA=</HashCode>
+      <FileName>belIcms10.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belIcms20" Collapsed="true">
+    <Position X="10" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAACAAGgAAAAAAAAAIFBAAAAEAAAEAAAAAAAAIAAgAA=</HashCode>
+      <FileName>belIcms20.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belIcms30" Collapsed="true">
+    <Position X="10" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEIACAgAACA0AAAAAAAEApAEAAAgAAAEAAAAAA=</HashCode>
+      <FileName>belIcms30.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belIcms40" Collapsed="true">
+    <Position X="10" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAABAEAAAEAAAAAAAAIAAAAA=</HashCode>
+      <FileName>belIcms40.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belIcms41" Collapsed="true">
+    <Position X="10" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAABAEAAAEAAAAAAAAIAAAAA=</HashCode>
+      <FileName>belIcms41.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belIcms50" Collapsed="true">
+    <Position X="10" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAABAEAAAEAAAAAAAAIAAAAA=</HashCode>
+      <FileName>belIcms50.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belIcms51" Collapsed="true">
+    <Position X="10" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAACAAGgAAAAAAAAAIFBAAAAEAAAEAAAAAAAAIAAgAA=</HashCode>
+      <FileName>belIcms51.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belIcms60" Collapsed="true">
+    <Position X="10" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAACAgAAAAAAAEAgAEAAAAAAAEAAAAAA=</HashCode>
+      <FileName>belIcms60.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belIcms70" Collapsed="true">
+    <Position X="10" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAACAAGoACAgAACA0IFBAAAAEApAEAAAgAAAEIAAgAA=</HashCode>
+      <FileName>belIcms70.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belIcms90" Collapsed="true">
+    <Position X="10" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAACAAGoACAgAACA0IFBAAAAEApAEAAAgAAAEIAAgAA=</HashCode>
+      <FileName>belIcms90.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belIpi" Collapsed="true">
+    <Position X="8.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAQQIAAAIIBgAAAAAIAAAACAAAACAAAAAAAAIBAAAI=</HashCode>
+      <FileName>belIpi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belIpitrib" Collapsed="true">
+    <Position X="10" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAEAAAEAAIAFAAQAAEAAAEEAAABBAAAAAAAA=</HashCode>
+      <FileName>belIpitrib.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belIpint" Collapsed="true">
+    <Position X="10" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>belIpint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belIi" Collapsed="true">
+    <Position X="8.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAMFAAAAAAAEAAAIAAAAAQAAAAAA=</HashCode>
+      <FileName>belIi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belPis" Collapsed="true">
+    <Position X="8.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAEAAACAAAAAAAAAAAiAEAAAAEAAAAgAAAAAAQA=</HashCode>
+      <FileName>belPis.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belPisaliq" Collapsed="true">
+    <Position X="10" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAACFAAAAAEAAAEAIAAAAAAACAAAA=</HashCode>
+      <FileName>belPisaliq.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belPisqtde" Collapsed="true">
+    <Position X="10" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAACAAAAAAUAAAEAAAAARAAAACAAA=</HashCode>
+      <FileName>belPisqtde.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belPisnt" Collapsed="true">
+    <Position X="10" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>belPisnt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belPisoutr" Collapsed="true">
+    <Position X="10" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAACFAAAAAUAAAEAIAAARAAACCAAA=</HashCode>
+      <FileName>belPisoutr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belPisst" Collapsed="true">
+    <Position X="10" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAACFAAAAAQAAAAAIAAARAAACCAAA=</HashCode>
+      <FileName>belPisst.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belCofins" Collapsed="true">
+    <Position X="8.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAQCAAAAEAAAAAAhAAAEAAAAAAAAAACABAAAAAAAAI=</HashCode>
+      <FileName>belCofins.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belCofinsaliq" Collapsed="true">
+    <Position X="10" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAFAAIAAMAgAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>belCofinsaliq.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belCofinsqtde" Collapsed="true">
+    <Position X="10" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAIAAUAAAEAAAAARAAAACAAA=</HashCode>
+      <FileName>belCofinsqtde.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belCofinsnt" Collapsed="true">
+    <Position X="10" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>belCofinsnt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belCofinsoutr" Collapsed="true">
+    <Position X="10" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAFAAIAAcAgAEAAAAARAAAACAAA=</HashCode>
+      <FileName>belCofinsoutr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belCofinsst" Collapsed="true">
+    <Position X="10" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAFAAIAAYAgAAAAAAARAAAACAAA=</HashCode>
+      <FileName>belCofinsst.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belIss" Collapsed="true">
+    <Position X="8.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAYAFAAAAABAAAAAACIAABIQAAAAA=</HashCode>
+      <FileName>belIss.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belInfadprod" Collapsed="true">
+    <Position X="6.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>belInfadprod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belTotal" Collapsed="true">
+    <Position X="4.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAQCQAAAAAAAAAAAAAAAACAAAAAAAAAAAAABA=</HashCode>
+      <FileName>belTotal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belIcmstot" Collapsed="true">
+    <Position X="6.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAACAAAIAADAovFIIIICQIAAAEAAABAAAKAAQgA=</HashCode>
+      <FileName>belIcmstot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belIssqntot" Collapsed="true">
+    <Position X="6.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAACAAAAAAAAACHAgIAAABAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>belIssqntot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belRetTrib" Collapsed="true">
+    <Position X="6.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIIACAAIAAAAAAAAACABAgAAAAAAwgAAACAAAgAACA=</HashCode>
+      <FileName>belRetTrib.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belTransp" Collapsed="true">
+    <Position X="4.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GAAAAAAAAAAIACCAAAAAAACAAgAAAABAAAAIAAggABA=</HashCode>
+      <FileName>belTransp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belTransportadora" Collapsed="true">
+    <Position X="6.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEICIAAAAAABAAAABAIEAAAAQgAEAAAEAAAACAQAA=</HashCode>
+      <FileName>belTransportadora.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belRetTransp" Collapsed="true">
+    <Position X="6.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAQCEAAgAAABAAICAAAAAAVAAAAABA=</HashCode>
+      <FileName>belRetTransp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belVeicTransp" Collapsed="true">
+    <Position X="6.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIAAAIAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>belVeicTransp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belReboque" Collapsed="true">
+    <Position X="6.25" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIAAAIAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>belReboque.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belVol" Collapsed="true">
+    <Position X="6.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAQAACAAAAAAAgAAAACAQAAwQQAAAAAAAAQAA=</HashCode>
+      <FileName>belVol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belLacres" Collapsed="true">
+    <Position X="6.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>belLacres.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belFat" Collapsed="true">
+    <Position X="6.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAgAgAAAAAAQgAAAAAAIAREAAAAIAA=</HashCode>
+      <FileName>belFat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belCobr" Collapsed="true">
+    <Position X="4.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>belCobr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belInfAdic" Collapsed="true">
+    <Position X="4.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAMAAAgAAAAAAAAAAABCAAAAAAAAAAABAAAAQAA=</HashCode>
+      <FileName>belInfAdic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belObsCont" Collapsed="true">
+    <Position X="6.25" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAgBAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>belObsCont.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belObsFisco" Collapsed="true">
+    <Position X="6.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAgBAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>belObsFisco.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belProcRef" Collapsed="true">
+    <Position X="6.25" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAEABAAAAA=</HashCode>
+      <FileName>belProcRef.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belExporta" Collapsed="true">
+    <Position X="4.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAABAAAAACAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>belExporta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belCompra" Collapsed="true">
+    <Position X="4.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAACAAAgAAAEACQAAAAAAA=</HashCode>
+      <FileName>belCompra.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belSignature" Collapsed="true">
+    <Position X="4.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>belSignature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belDup" Collapsed="true">
+    <Position X="8.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAEAQAAAQAAAAAAAAAAAAAAAAQAAAAAAIA=</HashCode>
+      <FileName>belDup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belReciboFazenda" Collapsed="true">
+    <Position X="15" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAABABAgAAAAAIAEQAAAAAAAAAAAAg=</HashCode>
+      <FileName>belReciboFazenda.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belNfeCancelamento" Collapsed="true">
+    <Position X="13" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAgAMAECABAAAAADAiEAEIAIAABAAQAAAABAAQAg=</HashCode>
+      <FileName>belNfeCancelamento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belEmail" Collapsed="true">
+    <Position X="13" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAgAkAAQAAAAAUiAAABAAAQBCEAIAAACAAMABAgAAIA=</HashCode>
+      <FileName>belEmail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belBusRetFazenda" Collapsed="true">
+    <Position X="15.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAQAAAAAAAAQBQAAAAAEAAAAATAAAAABAAAAACQAA=</HashCode>
+      <FileName>belBusca.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belNfeConsultaNF" Collapsed="true">
+    <Position X="15.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAEAAAABAAAAAAAAEAEBAIAABAQAAAAAAAAAAA=</HashCode>
+      <FileName>belNfeConsultaNF.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belImportaEscritor">
+    <Position X="4.5" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAICAQAAAAQAIAgAghgAAAgAAAAEAAAQAAAAA=</HashCode>
+      <FileName>belImportaEscritor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belICMSSN101" Collapsed="true">
+    <Position X="11.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAABAAAAAAAAAAAAAAAAAAAAACAAAAAIAAA=</HashCode>
+      <FileName>belICMSSN101.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belICMSPart" Collapsed="true">
+    <Position X="11.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAEAACAChAICCAAAAAAAAKACAAAAAAAAAAAAAEAg=</HashCode>
+      <FileName>belICMSPart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belICMSSN102" Collapsed="true">
+    <Position X="11.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>belICMSSN102.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belICMSSN201" Collapsed="true">
+    <Position X="11.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAChAACAAAAAAAAAIACAAAAAACAAAAAIAAg=</HashCode>
+      <FileName>belICMSSN201.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belICMSSN500" Collapsed="true">
+    <Position X="11.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIABAAAAAAAAAAAAAAAAAAABACAAAAAAAAA=</HashCode>
+      <FileName>belICMSSN500.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belICMSSN900" Collapsed="true">
+    <Position X="11.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAUAAAIChAICCAAAAAAAAIACAAAABACAAAAAIAAg=</HashCode>
+      <FileName>belICMSSN900.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belICMSST" Collapsed="true">
+    <Position X="11.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIABAAAAAAAAADAAAAAAAAABAAAAAAAAEAA=</HashCode>
+      <FileName>belICMSST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

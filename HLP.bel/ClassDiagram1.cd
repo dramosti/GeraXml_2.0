@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HLP.bel.belDuplicata">
+    <Position X="20" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJEAACAAEAFAGAAAEAAABAAIAAgAEAAAIFAAEAAAAgA=</HashCode>
+      <FileName>belDuplicata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HLP.bel.belNumeroNF">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAACAAAAAAAAAAQAAAAAABAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>belNumeroNF.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belIde">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KiwABgIBAACCAAAAAAAiAEEhRAQAAQSEAAABSYhAAEE=</HashCode>
+      <FileName>belIde.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belEmit">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAIHIxAABAARUEAgBAAEAAEAUgAEBAEkCBBQCERgA=</HashCode>
+      <FileName>belEmit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belDest">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAIDIgAAAAARUEAABAAEABEAUgAEBAEkCBAQKARgA=</HashCode>
+      <FileName>belDest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belEndEnt">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAIDIAAAAAAQEAAAAAAAAAEAQAAABAEECBAAAAQgA=</HashCode>
+      <FileName>belEndEnt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belFat">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAEAQAgAwAAAAAAQgAAAAAAIAREAAAAAIA=</HashCode>
+      <FileName>belFat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belTotal">
+    <Position X="17.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>belTotal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belNFe">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NFe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belGerarXML">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIKIEBcCBAAAQAAAQADAAAAECBAAAAADADAAABAAQ=</HashCode>
+      <FileName>belGerarxml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belProcessaNF">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAIAAABAAEAAAIAACEAAAAAAAIAAgAACA=</HashCode>
+      <FileName>belProcessaNF.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HLP.bel.belCertificadoDigital">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>belCertificadoDigital.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

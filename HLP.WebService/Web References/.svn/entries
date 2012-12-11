@@ -1,0 +1,394 @@
+10
+
+dir
+5210
+file://192.168.9.100/g/svn/repos/csharp/Fontes/NFE_Oficial_2.0_2011/HLP.WebService/Web%20References
+file://192.168.9.100/g/svn/repos/csharp
+
+
+
+2012-05-24T11:48:42.616651Z
+3951
+diego
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bec86352-e73f-ed4d-b236-e556ffed02f2
+
+v2_Homologacao_NFeConsultaCadastro_MS
+dir
+
+SCAN_Producao_NFeConsulta
+dir
+
+v2_Producao_NFeRecepcao_RS
+dir
+
+SCAN_Producao_NFeCancelamento
+dir
+
+Producao_NFeCancelamento_RS
+dir
+
+Homologacao_NfeStatusServico_RS
+dir
+
+Producao_NfeRetRecepcao_RS
+dir
+
+CTe_Homologacao_cteConsulta
+dir
+
+v2_Producao_NFeCancelamento_SP
+dir
+
+CTe_Homologacao_cteCancelamento
+dir
+
+v2_Producao_NFeConsulta_RS
+dir
+
+Homologacao_NFeCancelamento
+dir
+
+v2_Producao_NFeRetRecepcao_SP
+dir
+
+v2_Producao_NFeInutilizacao_RS
+dir
+
+v2_SCAN_Producao_NFeInutilizacao
+dir
+
+CTe_Homologacao_cteRetRecepcao
+dir
+
+Producao.NfeCancelamento_MS
+dir
+
+Homologacao_NfeInutilizacao
+dir
+
+Homologacao_NfeRetRecepcao_MS
+dir
+
+v2_SCAN_Producao_NFeRetRecepcao
+dir
+
+Homologacao_nfeRetRecepcao
+dir
+
+v2_SCAN_Homologacao_NFeRecepcao
+dir
+
+v2_Homologacao_NFeCancelamento_MS
+dir
+
+SCAN_Homologacao_NFeInutilizacao
+dir
+
+v2_Homologacao_NFeRetRecepcao_MS
+dir
+
+Producao_NfeRecepcao_MS
+dir
+
+Homologacao_NfeRecepcaoLote
+dir
+
+v2_Homologacao_NFeRetRecepacao_RS
+dir
+
+SCAN_Producao_NFeRecepcao
+dir
+
+Producao_NFeRecepcao_RS
+dir
+
+v2_Producao_NFeStatusServico_SP
+dir
+
+Producao_NfeConsulta_MS
+dir
+
+CTe_Homologacao_cteStatusServico
+dir
+
+CTe_Producao_cteInutilizacao
+dir
+
+v2_Homologacao_NFeRecepcaoEvento_RS
+dir
+
+Producao_NfeInutilizacao_MS
+dir
+
+v2_Producao_NFeRecepcao_SP
+dir
+
+CTe_Homologacao_cteRecepcao
+dir
+
+Producao_NFeRetRecepcao
+dir
+
+Producao_NFeInutilizacao_RS
+dir
+
+v2_Homologacao_NFeStatusServico_MS
+dir
+
+SCAN_Homolocacao_StatusServico
+dir
+
+Itu_servicos_Homologacao
+dir
+
+v2_Producao_NFeConsulta_SP
+dir
+
+v2_Homologacao_NFeRecepcao_MS
+dir
+
+v2_SCAN_Producao_NFeConsulta
+dir
+
+Homologacao_NfeCancelamento_MS
+dir
+
+v2_Producao_NFeInutilizacao_SP
+dir
+
+v2_SCAN_Producao_NFeCancelamento
+dir
+
+v2_SCAN_Homologacao_NFeStatusServico
+dir
+
+SCAN_Homologacao_NFeConsulta
+dir
+
+v2_Producao_NFeRecepcaoEvento_MS
+dir
+
+SCAN_Homologacao_NFeCancelamento
+dir
+
+v2_Homologacao_NFeConsulta_MS
+dir
+
+Homologacao_NfeRetRecepcao_RS
+dir
+
+Producao_NfeStatusServico_MS
+dir
+
+v2_Homologacao_NFeInutilizacao_MS
+dir
+
+v2_Producao_NFeConsultaCadastro_MS
+dir
+
+Ws_versionamento_Cliente
+dir
+
+v2_Homologacao_NFeCancelamento_RS
+dir
+
+Itu_servicos_Producao
+dir
+
+CTe_Producao_cteConsulta
+dir
+
+v2_Homologacao_NFeRecepcaoEvento_SP
+dir
+
+CTe_Producao_cteCancelamento
+dir
+
+CTe_Producao_cteRetRecepcao
+dir
+
+Producao_NFeInutilizacao
+dir
+
+Producao_NfeConsulta_RS
+dir
+
+Homologacao_NfeRecepcao_MS
+dir
+
+v2_SCAN_Producao_NFeRecepcao
+dir
+
+v2_Homologacao_NFeConsultaCadastro_SP
+dir
+
+v2_Producao_NFeCancelamento_MS
+dir
+
+SCAN_Producao_NFeRetRecepcao
+dir
+
+Producao_nfeStatusServicoNF
+dir
+
+v2_Producao_NFeRetRecepcao_MS
+dir
+
+Homologacao_NfeConsulta_MS
+dir
+
+v2_Homologacao_NFeStatusServico_RS
+dir
+
+Homologacao_NfeInutilizacao_MS
+dir
+
+v2_Homologacao_NFeRecepcao_RS
+dir
+
+Homologacao_NfeCancelamento_RS
+dir
+
+Producao_NFeConsultaNf
+dir
+
+CTe_Producao_cteStatusServico
+dir
+
+v2_Producao_NFeRecepcaoEvento_RS
+dir
+
+Homologacao_NfeStatusServicoNF
+dir
+
+v2_Homologacao_NFeCancelamento_SP
+dir
+
+CTe_Producao_cteRecepcao
+dir
+
+v2_Homologacao_NFeConsulta_RS
+dir
+
+SCAN_Producao_Nfe_StatusServico
+dir
+
+Producao_NfeStatusServico_RS
+dir
+
+v2_Homologacao_NFeInutilizacao_RS
+dir
+
+v2_SCAN_Homologacao_NFeInutilizacao
+dir
+
+v2_SCAN_Homologacao_NFeRetRecepcao
+dir
+
+v2_Producao_NFeConsultaCadastro_RS
+dir
+
+v2_Producao_NFeStatusServico_MS
+dir
+
+v2_Producao_NFeRecepcao_MS
+dir
+
+Homologacao_NFeConsultaNF
+dir
+
+Producao_NFeCancelamento
+dir
+
+Homologacao_NfeStatusServico_MS
+dir
+
+v2_SCAN_Producao_NFeStatusServico
+dir
+
+Producao_NfeRetRecepcao_MS
+dir
+
+v2_Producao_NFeConsulta_MS
+dir
+
+SCAN_Producao_NFeInutilizacao
+dir
+
+SCAN_Homologacao_NfeRecepcao
+dir
+
+Homologacao_NfeRecepcao_RS
+dir
+
+v2_Producao_NFeInutilizacao_MS
+dir
+
+v2_Homologacao_NFeStatusServico_SP
+dir
+
+v2_Producao_NFeCancelamento_RS
+dir
+
+CTe_Homologacao_cteInutilizacao
+dir
+
+v2_Homologacao_NFeRecepcao_SP
+dir
+
+v2_Producao_NFeRetRecepcao_RS
+dir
+
+Homologacao_NfeConsulta_RS
+dir
+
+Homologacao_NfeInutilizacao_RS
+dir
+
+v2_Producao_NFeRecepcaoEvento_SP
+dir
+
+SCAN_Homologacao_NFeRetRecepcao
+dir
+
+v2_Homologacao_NFeConsulta_SP
+dir
+
+v2_SCAN_Homologacao_NFeConsulta
+dir
+
+v2_Homologacao_NFeInutilizacao_SP
+dir
+
+v2_SCAN_Homologacao_NFeCancelamento
+dir
+
+Producao_NFeRecepcao
+dir
+
+v2_Homologacao_NfeRetRecepcao_SP
+dir
+
+v2_Producao_NFeConsultaCadastro_SP
+dir
+
+v2_Homologacao_RetRecepcao_MS
+dir
+
+v2_Producao_NFeStatusServico_RS
+dir
+
