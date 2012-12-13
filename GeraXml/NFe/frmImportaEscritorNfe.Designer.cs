@@ -54,6 +54,8 @@ namespace NfeGerarXml
             this.Emissao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NFE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Arquivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.selecionarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.pgbNF = new System.Windows.Forms.ToolStripProgressBar();
@@ -72,18 +74,16 @@ namespace NfeGerarXml
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.selecionarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.panel1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbxEmpresas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvXmls)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvXmlNaoValidado)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ofdXml
@@ -203,6 +203,7 @@ namespace NfeGerarXml
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvXmls.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvXmls.RowTemplate.Height = 18;
+            this.dgvXmls.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvXmls.Size = new System.Drawing.Size(781, 346);
             this.dgvXmls.TabIndex = 26;
             this.dgvXmls.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvXmls_CellClick);
@@ -280,6 +281,21 @@ namespace NfeGerarXml
             this.Arquivo.Name = "Arquivo";
             this.Arquivo.ReadOnly = true;
             this.Arquivo.Visible = false;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.selecionarToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(129, 26);
+            // 
+            // selecionarToolStripMenuItem
+            // 
+            this.selecionarToolStripMenuItem.Image = global::GeraXml.Properties.Resources.confirmar;
+            this.selecionarToolStripMenuItem.Name = "selecionarToolStripMenuItem";
+            this.selecionarToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.selecionarToolStripMenuItem.Text = "Selecionar";
             // 
             // toolTip1
             // 
@@ -454,21 +470,6 @@ namespace NfeGerarXml
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.Width = 300;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.selecionarToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(129, 26);
-            // 
-            // selecionarToolStripMenuItem
-            // 
-            this.selecionarToolStripMenuItem.Image = global::GeraXml.Properties.Resources.confirmar;
-            this.selecionarToolStripMenuItem.Name = "selecionarToolStripMenuItem";
-            this.selecionarToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
-            this.selecionarToolStripMenuItem.Text = "Selecionar";
-            // 
             // frmImportaEscritorNfe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -491,13 +492,13 @@ namespace NfeGerarXml
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbxEmpresas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvXmls)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvXmlNaoValidado)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
