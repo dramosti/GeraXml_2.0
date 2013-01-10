@@ -166,7 +166,6 @@ namespace NfeGerarXml
             this.buttonSpecAny1});
             this.txtXml.Location = new System.Drawing.Point(108, 34);
             this.txtXml.Name = "txtXml";
-            this.txtXml.ReadOnly = true;
             this.txtXml.Size = new System.Drawing.Size(396, 20);
             this.txtXml.TabIndex = 29;
             this.toolTip1.SetToolTip(this.txtXml, "Pasta  onde se Encontra os XML\'s a Serem Escriturados");
@@ -296,6 +295,7 @@ namespace NfeGerarXml
             this.selecionarToolStripMenuItem.Name = "selecionarToolStripMenuItem";
             this.selecionarToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.selecionarToolStripMenuItem.Text = "Selecionar";
+            this.selecionarToolStripMenuItem.Click += new System.EventHandler(this.selecionarToolStripMenuItem_Click);
             // 
             // toolTip1
             // 

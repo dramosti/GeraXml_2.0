@@ -290,6 +290,36 @@ namespace HLP.bel
 
                             }
                         }
+
+                        //os_28439 - BEGIN
+                        string sST_MOVFIS = "";
+                        string sQuery = string.Format("select coalesce(natop.st_movfis,'')st_movfis from natop where natop.cd_cfop = '{0}'", sCFOP);
+                        using (FbCommand cmd = new FbCommand(sQuery, Conexao))
+                        {
+                            if (Conexao.State != ConnectionState.Open)
+                            {
+                                Conexao.Open();
+                            }
+                            try
+                            {
+                                sST_MOVFIS = cmd.ExecuteScalar().ToString();
+                            }
+                            catch (Exception ex)
+                            {
+                                sST_MOVFIS = "";
+                            }                            
+                        }
+
+                        if (sST_MOVFIS != "")
+                        {
+                            sIncluiItensCampo.Append("st_moviest");
+                            sIncluiItensCampo.Append(", ");
+                            sIncluiItensValor.Append("'");
+                            sIncluiItensValor.Append(sST_MOVFIS);
+                            sIncluiItensValor.Append("', ");
+                        } //os_28439 - AND
+
+
                         sIncluiItensCampo.Append("cd_cfop");
                         sIncluiItensCampo.Append(", ");
                         sIncluiItensValor.Append("'");
