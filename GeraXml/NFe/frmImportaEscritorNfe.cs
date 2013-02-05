@@ -131,23 +131,51 @@ namespace NfeGerarXml
 
                         if (objInfNFe != null)
                         {
-                            sDoc = "";
-                            if (objInfNFe.BelDest.Cnpj != null)
+                            string sTipoLanc = TipoLancamento(objInfNFe);
+                            bool bSaida = true; //  NotaSaida();
+                            if (sTipoLanc == "E")
                             {
-                                sDoc = objInfNFe.BelDest.Cnpj.ToString();
+                                bSaida = false;
+                            }
+                            sDoc = "";
+
+                            if (!bSaida)
+                            {
+                                if (objInfNFe.BelEmit.Cnpj != null)
+                                {
+                                    sDoc = objInfNFe.BelEmit.Cnpj.ToString();
+                                }
+                                else
+                                {
+                                    sDoc = objInfNFe.BelEmit.Cpf.ToString();
+                                }
                             }
                             else
                             {
-                                sDoc = objInfNFe.BelDest.Cpf.ToString();
+                                if (objInfNFe.BelDest.Cnpj != null)
+                                {
+                                    sDoc = objInfNFe.BelDest.Cnpj.ToString();
+                                }
+                                else
+                                {
+                                    sDoc = objInfNFe.BelDest.Cpf.ToString();
+                                }
                             }
+
                             sTipo = (objInfNFe.BelDest.Cnpj != null ? "CNPJ" : "CPF");
-                            sCD_CLIFOR = objbelEscrituracao.BuscaCodigoClifor(objbelEscrituracao.FormataString(sDoc, sTipo), objInfNFe);
+                            sCD_CLIFOR = objbelEscrituracao.BuscaCodigoClifor(objbelEscrituracao.FormataString(sDoc, sTipo), objInfNFe, bSaida);
                             if (sCD_CLIFOR != "")
                             {
-                                bValida = objbelEscrituracao.ValidaNotaJaEscriturada(sCD_EMPRESA, objInfNFe.BelIde.Nnf,
-                                   objInfNFe.BelIde.Serie,
-                                   sCD_CLIFOR
-                                   );
+                                
+                               // if (bSaida)
+                                {
+                                    bValida = objbelEscrituracao.ValidaNotaJaEscriturada(sCD_EMPRESA, objInfNFe.BelIde.Nnf,
+                                       objInfNFe.BelIde.Serie,
+                                       sCD_CLIFOR,
+                                       objInfNFe.BelIde.Mod,
+                                       bSaida
+                                       );
+                                }
                             }
 
                             if (bValida)
@@ -203,6 +231,89 @@ namespace NfeGerarXml
 
             return objArquivos;
         }
+
+
+        public string TipoLancamento(belInfNFe objInfNFe)
+        {
+            try
+            {
+                string sTipoLancamento = string.Empty;
+                string sCNPJempresa = "";
+                bool bProdutorRural = false;
+                using (FbCommand cmd = new FbCommand("select cd_cgc from empresa where cd_empresa ='" + cbxEmpresas.SelectedValue.ToString() + "'", fbConexao))
+                {
+                    if (fbConexao.State != ConnectionState.Open)
+                    {
+                        fbConexao.Open();
+                    }
+                    GeraXMLExp objGerarXMLExp = new GeraXMLExp();
+                    sCNPJempresa = belUtil.TiraSimbolo(cmd.ExecuteScalar().ToString(), "");
+                    fbConexao.Close();
+                }
+
+                //--->  0-Entrada / 1-Saída
+
+
+                if (objInfNFe.BelIde.Tpnf == "0")
+                {
+                    sTipoLancamento = "E";
+                    if (objInfNFe.BelEmit.Cnpj != null)
+                    {
+                        if (objInfNFe.BelEmit.Cnpj.ToString() == sCNPJempresa)
+                        {
+                            bProdutorRural = true;
+                        }
+                    }
+                    else
+                    {
+                        string sInstrucao = string.Empty;
+                        sInstrucao = "select cd_cpf from empresa where cd_empresa ='" + objInfNFe.Empresa + "'";
+                        using (FbCommand cmd = new FbCommand(sInstrucao, fbConexao))
+                        {
+                            if (fbConexao.State != ConnectionState.Open)
+                            {
+                                fbConexao.Open();
+                            }
+                            GeraXMLExp objGerarXMLExp = new GeraXMLExp();
+
+                            string sCPF = belUtil.TiraSimbolo(cmd.ExecuteScalar().ToString(), "");
+
+                            if (sCPF == objInfNFe.BelEmit.Cpf.ToString())
+                            {
+                                sCPF = objInfNFe.BelEmit.Cpf;
+                                bProdutorRural = true;
+                            }
+                        }
+                    }
+                }
+                else
+                {
+
+                    if (objInfNFe.BelEmit.Cnpj != null)
+                    {
+                        if (objInfNFe.BelEmit.Cnpj.ToString() == sCNPJempresa)
+                        {
+                            sTipoLancamento = "S";
+                        }
+                    }
+                    if (objInfNFe.BelDest.Cnpj != null)
+                    {
+                        if (objInfNFe.BelDest.Cnpj.ToString() == sCNPJempresa)
+                        {
+                            sTipoLancamento = "E";
+                        }
+                    }
+                }
+                return sTipoLancamento;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("Não foi possivel definir o Tipo de Lançamento, Erro.: {0}",
+                                                   ex.Message));
+            }
+        }
+
+
 
         private void dgvXmls_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -423,6 +534,6 @@ namespace NfeGerarXml
             dgvXmls.Refresh();
         }
 
-       
+
     }
 }

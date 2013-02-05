@@ -7,11 +7,6 @@ using System.Windows.Forms;
 using System.Data;
 using HLP.bel.NFe.GeraXml;
 
-
-
-
-
-
 namespace HLP.bel
 {
     public class belEscrituracao
@@ -307,7 +302,7 @@ namespace HLP.bel
                             catch (Exception ex)
                             {
                                 sST_MOVFIS = "";
-                            }                            
+                            }
                         }
 
                         if (sST_MOVFIS != "")
@@ -345,6 +340,11 @@ namespace HLP.bel
                         }
 
                         sIncluiItensCampo.Append("vl_unit");
+                        sIncluiItensCampo.Append(", ");
+                        sIncluiItensValor.Append(objInfNFe.BelDet[i].belProd.Vuncom.ToString().Replace(",", "."));
+                        sIncluiItensValor.Append(", ");
+
+                        sIncluiItensCampo.Append("vl_contabil");
                         sIncluiItensCampo.Append(", ");
                         sIncluiItensValor.Append(objInfNFe.BelDet[i].belProd.Vuncom.ToString().Replace(",", "."));
                         sIncluiItensValor.Append(", ");
@@ -3519,7 +3519,7 @@ namespace HLP.bel
             return scdClifor;
         }
 
-        public string BuscaCodigoClifor(string sDoc, belInfNFe objbelinf)
+        public string BuscaCodigoClifor(string sDoc, belInfNFe objbelinf, bool bSaida)
         {
             string scdClifor = "";
             try
@@ -3529,7 +3529,14 @@ namespace HLP.bel
                 sCodigoCliente.Append("cd_clifor ");
                 sCodigoCliente.Append("from Clifor ");
                 sCodigoCliente.Append("where ");
-                sCodigoCliente.Append((objbelinf.BelDest.Cnpj != null ? "cd_cgc" : "cd_cpf"));
+                if (!bSaida)
+                {
+                    sCodigoCliente.Append((objbelinf.BelEmit.Cnpj != null ? "cd_cgc" : "cd_cpf"));
+                }
+                else
+                {
+                    sCodigoCliente.Append((objbelinf.BelDest.Cnpj != null ? "cd_cgc" : "cd_cpf"));
+                }
                 sCodigoCliente.Append(" ='");
                 sCodigoCliente.Append(sDoc);
                 sCodigoCliente.Append("'");
@@ -3557,7 +3564,7 @@ namespace HLP.bel
             return scdClifor;
         }
 
-        public bool ValidaNotaJaEscriturada(string sCD_EMPRESA, string Nnf, string sSerie, string scd_clifor)
+        public bool ValidaNotaJaEscriturada(string sCD_EMPRESA, string Nnf, string sSerie, string scd_clifor, string sModelo, bool bSAIDA)
         {
             StringBuilder sQuery = new StringBuilder();
             sQuery.Append("SELECT count(*) total FROM   notalf ");
@@ -3565,12 +3572,18 @@ namespace HLP.bel
             sQuery.Append("and cd_notafis = '{1}' ");
             sQuery.Append("and cd_clifor = '{2}' ");
             sQuery.Append("and cd_serienf = '{3}' ");
+            if (bSAIDA)
+                sQuery.Append("and tp_livro = '2' ");
+            else
+                sQuery.Append("and tp_livro = '1' ");
+            sQuery.Append("and cd_modelo = {4}");
 
             string sQueryFim = string.Format(sQuery.ToString(),
                 sCD_EMPRESA,
                 Nnf,
                 scd_clifor,
-                sSerie);
+                sSerie,
+                sModelo);
 
             bool bValida = true;
 
@@ -3764,7 +3777,7 @@ namespace HLP.bel
                 sInsert.Append("', '");
                 sInsert.Append(objInfNFe.BelDest.Uf.ToString());
                 sInsert.Append("', '");
-                sInsert.Append(objInfNFe.BelDest.Cep.ToString());
+                sInsert.Append(objInfNFe.BelDest.Cep != null ? objInfNFe.BelDest.Cep.ToString() : "");
                 sInsert.Append("', '");
                 sInsert.Append((objInfNFe.BelDest.Fone != null ? objInfNFe.BelDest.Fone.ToString() : ""));
                 sInsert.Append("', '");
