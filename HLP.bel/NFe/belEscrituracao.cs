@@ -148,6 +148,7 @@ namespace HLP.bel
 
                         // DIEGO 12/05 - ERRO CLIENTE 238 ARQV 11, 12,13
                         strucProd objProd = BuscaProd(objInfNFe.Empresa, objInfNFe.BelDet[i].belProd);
+                        //                      objInfNFe.BelDet[i].belImposto.belIpi
 
                         sIncluiItensCampo.Append("cd_empresa");
                         sIncluiItensCampo.Append(", ");
@@ -253,6 +254,7 @@ namespace HLP.bel
                                 sIncluiItensCampo.Append(", ");
                                 sIncluiItensValor.Append(objInfNFe.BelDet[i].belImposto.belIpi.belIpitrib.Vipi.ToString().Replace(",", "."));
                                 sIncluiItensValor.Append(", ");
+
                             }
                         }
 
@@ -425,8 +427,49 @@ namespace HLP.bel
                         sIncluiItensValor.Append(dvAliq.ToString().Replace(",", ".") + ", ");
                         sIncluiItensCampo.Append("vl_icms, ");
                         sIncluiItensValor.Append(dvIcms.ToString().Replace(",", ".") + ", ");
-                        sIncluiItensCampo.Append("vl_baseicms");
-                        sIncluiItensValor.Append(dvBCicms.ToString().Replace(",", "."));
+                        sIncluiItensCampo.Append("vl_baseicms,");
+                        sIncluiItensValor.Append(dvBCicms.ToString().Replace(",", ".") + ", ");
+
+                        string cstPis = "";
+                        string cstCofins = "";
+                        if (objInfNFe.BelDet[i].belImposto.belPis.belPisaliq != null)
+                        {
+                            cstPis = objInfNFe.BelDet[i].belImposto.belPis.belPisaliq.Cst;
+                        }
+                        else if (objInfNFe.BelDet[i].belImposto.belPis.belPisqtde != null)
+                        {
+                            cstPis = objInfNFe.BelDet[i].belImposto.belPis.belPisqtde.Cst;
+                        }
+                        else if (objInfNFe.BelDet[i].belImposto.belPis.belPisnt != null)
+                        {
+                            cstPis = objInfNFe.BelDet[i].belImposto.belPis.belPisnt.Cst;
+                        }
+                        else if (objInfNFe.BelDet[i].belImposto.belPis.belPisoutr != null)
+                        {
+                            cstPis = objInfNFe.BelDet[i].belImposto.belPis.belPisoutr.Cst;
+                        }
+
+                        if (objInfNFe.BelDet[i].belImposto.belCofins.belCofinsaliq != null)
+                        {
+                            cstCofins = objInfNFe.BelDet[i].belImposto.belCofins.belCofinsaliq.Cst;
+                        }
+                        else if (objInfNFe.BelDet[i].belImposto.belCofins.belCofinsqtde != null)
+                        {
+                            cstCofins = objInfNFe.BelDet[i].belImposto.belCofins.belCofinsqtde.Cst;
+                        }
+                        else if (objInfNFe.BelDet[i].belImposto.belCofins.belCofinsnt != null)
+                        {
+                            cstCofins = objInfNFe.BelDet[i].belImposto.belCofins.belCofinsnt.Cst;
+                        }
+                        else if (objInfNFe.BelDet[i].belImposto.belCofins.belCofinsoutr != null)
+                        {
+                            cstCofins = objInfNFe.BelDet[i].belImposto.belCofins.belCofinsoutr.Cst;
+                        }
+
+                        sIncluiItensCampo.Append("CD_SITTRIBCOF , ");
+                        sIncluiItensValor.Append(cstCofins + ", ");
+                        sIncluiItensCampo.Append("CD_SITTRIBPIS");
+                        sIncluiItensValor.Append(cstPis);
 
 
                         string sInstrucao = string.Format("Insert into notaitem ({0}) values ({1})",
@@ -1153,6 +1196,7 @@ namespace HLP.bel
 
 
                     bool bIndustria = false;
+
                     try
                     {
                         if (Conexao.State == ConnectionState.Closed)
