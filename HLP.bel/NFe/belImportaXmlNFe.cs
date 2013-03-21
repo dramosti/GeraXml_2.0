@@ -756,18 +756,11 @@ namespace HLP.bel
                                 objImpostos.belPis = objPis;
                                 objImpostos.belCofins = objCofins;
                                 objImpostos.belIss = objIss;
-
                                 objDet.belImposto = objImpostos;
                                 objDet.belInfadprod = objInfadProd;
-
-
                                 lobjDet.Add(objDet);
-
                             }
-
-
                         }
-
                     }
                 }
             }

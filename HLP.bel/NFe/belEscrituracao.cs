@@ -431,14 +431,25 @@ namespace HLP.bel
                         sIncluiItensValor.Append(dvBCicms.ToString().Replace(",", ".") + ", ");
 
                         string cstPis = "";
+                        string Vpis = "0";
+                        string Ppis = "0";
+                        string VbcPis = "0";
                         string cstCofins = "";
+                        string vCofins = "0";
+                        string pCofins = "0";
+                        string VbcCofins = "0";
+
                         if (objInfNFe.BelDet[i].belImposto.belPis.belPisaliq != null)
                         {
                             cstPis = objInfNFe.BelDet[i].belImposto.belPis.belPisaliq.Cst;
+                            VbcPis = objInfNFe.BelDet[i].belImposto.belPis.belPisaliq.Vbc.ToString().Replace(",", ".");
+                            Vpis = objInfNFe.BelDet[i].belImposto.belPis.belPisaliq.Vpis.ToString().Replace(",", ".");
+                            Ppis = objInfNFe.BelDet[i].belImposto.belPis.belPisaliq.Ppis.ToString().Replace(",", ".");
                         }
                         else if (objInfNFe.BelDet[i].belImposto.belPis.belPisqtde != null)
                         {
                             cstPis = objInfNFe.BelDet[i].belImposto.belPis.belPisqtde.Cst;
+                            Vpis = objInfNFe.BelDet[i].belImposto.belPis.belPisqtde.Vpis.ToString().Replace(",", ".");
                         }
                         else if (objInfNFe.BelDet[i].belImposto.belPis.belPisnt != null)
                         {
@@ -447,15 +458,22 @@ namespace HLP.bel
                         else if (objInfNFe.BelDet[i].belImposto.belPis.belPisoutr != null)
                         {
                             cstPis = objInfNFe.BelDet[i].belImposto.belPis.belPisoutr.Cst;
+                            VbcPis = objInfNFe.BelDet[i].belImposto.belPis.belPisoutr.Vbc.ToString().Replace(",", ".");
+                            Vpis = objInfNFe.BelDet[i].belImposto.belPis.belPisoutr.Vpis.ToString().Replace(",", ".");
+                            Ppis = objInfNFe.BelDet[i].belImposto.belPis.belPisoutr.Ppis.ToString().Replace(",", ".");
                         }
 
                         if (objInfNFe.BelDet[i].belImposto.belCofins.belCofinsaliq != null)
                         {
                             cstCofins = objInfNFe.BelDet[i].belImposto.belCofins.belCofinsaliq.Cst;
+                            VbcCofins = objInfNFe.BelDet[i].belImposto.belCofins.belCofinsaliq.Vbc.ToString().Replace(",", ".");
+                            vCofins = objInfNFe.BelDet[i].belImposto.belCofins.belCofinsaliq.Vcofins.ToString().Replace(",", ".");
+                            pCofins = objInfNFe.BelDet[i].belImposto.belCofins.belCofinsaliq.Pcofins.ToString().Replace(",", ".");
                         }
                         else if (objInfNFe.BelDet[i].belImposto.belCofins.belCofinsqtde != null)
                         {
                             cstCofins = objInfNFe.BelDet[i].belImposto.belCofins.belCofinsqtde.Cst;
+                            vCofins = objInfNFe.BelDet[i].belImposto.belCofins.belCofinsqtde.Vcofins.ToString().Replace(",", ".");
                         }
                         else if (objInfNFe.BelDet[i].belImposto.belCofins.belCofinsnt != null)
                         {
@@ -464,10 +482,26 @@ namespace HLP.bel
                         else if (objInfNFe.BelDet[i].belImposto.belCofins.belCofinsoutr != null)
                         {
                             cstCofins = objInfNFe.BelDet[i].belImposto.belCofins.belCofinsoutr.Cst;
+                            VbcCofins = objInfNFe.BelDet[i].belImposto.belCofins.belCofinsoutr.Vbc.ToString().Replace(",", ".");
+                            vCofins = objInfNFe.BelDet[i].belImposto.belCofins.belCofinsoutr.Vcofins.ToString().Replace(",", ".");
+                            pCofins = objInfNFe.BelDet[i].belImposto.belCofins.belCofinsoutr.Pcofins.ToString().Replace(",", ".");
                         }
 
                         sIncluiItensCampo.Append("CD_SITTRIBCOF , ");
                         sIncluiItensValor.Append(cstCofins + ", ");
+
+                        sIncluiItensCampo.Append("VL_ALIQPIS  , ");
+                        sIncluiItensValor.Append(Ppis + ", ");
+                        sIncluiItensCampo.Append("VL_ALIQCOFINS , ");
+                        sIncluiItensValor.Append(pCofins + ", ");
+                        sIncluiItensCampo.Append("VL_PIS , ");
+                        sIncluiItensValor.Append(Vpis + ", ");
+                        sIncluiItensCampo.Append("VL_COFINS , ");
+                        sIncluiItensValor.Append(vCofins + ", ");
+                        sIncluiItensCampo.Append("VL_BASECOFINS , ");
+                        sIncluiItensValor.Append(VbcCofins + ", ");
+                        sIncluiItensCampo.Append("VL_BASEPIS , ");
+                        sIncluiItensValor.Append(VbcPis + ", ");
                         sIncluiItensCampo.Append("CD_SITTRIBPIS");
                         sIncluiItensValor.Append(cstPis);
 
@@ -579,6 +613,22 @@ namespace HLP.bel
 
                 if (bAchouProd)
                 {
+                    string dsmcm = string.Empty;
+                    dsmcm = (psObjProd.Ncm != null ? psObjProd.Ncm.ToString() : "GERAL");
+                    StringBuilder sbNCM = new StringBuilder();
+                    sbNCM.Append("cd_empresa ='");
+                    sbNCM.Append(psEmp);
+                    sbNCM.Append("'");
+                    sbNCM.Append(" and ");
+                    sbNCM.Append("ds_clasfis ='");
+                    sbNCM.Append(dsmcm);
+                    sbNCM.Append("'");
+                    bool bAchouCF = RegistroExiste("CLAS_FIS", sbNCM.ToString(), "cd_cf");
+                    string scf = string.Empty;
+                    if (!bAchouCF)
+                    {
+                        scf = CadastraCF(psObjProd);
+                    }
 
 
                     StringBuilder sCamposProd = new StringBuilder();
