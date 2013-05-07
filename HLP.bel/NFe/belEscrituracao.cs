@@ -487,7 +487,10 @@ namespace HLP.bel
                             pCofins = objInfNFe.BelDet[i].belImposto.belCofins.belCofinsoutr.Pcofins.ToString().Replace(",", ".");
                         }
 
-                        sIncluiItensCampo.Append("CD_SITTRIBCOF , ");
+                        cstCofins = "'" + cstCofins + "'";
+                        cstPis = "'" + cstPis + "'";
+
+                        sIncluiItensCampo.Append("CD_SITTRIBCOF ,");
                         sIncluiItensValor.Append(cstCofins + ", ");
 
                         sIncluiItensCampo.Append("VL_ALIQPIS  , ");

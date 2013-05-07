@@ -41,7 +41,7 @@ namespace HLP.Dao.CTe
                     sQuery.Append("coalesce(remetent.cd_cgc,'')CNPJ, ");
                     sQuery.Append("coalesce(remetent.cd_cpf,'')CPF, ");
                     sQuery.Append("coalesce(remetent.cd_insest,'')IE, ");
-                    sQuery.Append("coalesce(remetent.nm_guerra,'')xNome, ");
+                    sQuery.Append("coalesce(remetent.nm_social,'')xNome, ");
                     sQuery.Append("coalesce(remetent.cd_fone,'')fone, ");
                     sQuery.Append("coalesce(remetent.ds_ende,'')xLgr, ");
                     sQuery.Append("coalesce(remetent.nr_end,'')nro, ");
