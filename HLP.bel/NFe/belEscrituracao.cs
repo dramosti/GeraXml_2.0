@@ -4483,6 +4483,11 @@ namespace HLP.bel
 
                 sNumArq = sSql.ExecuteScalar().ToString();
 
+                if (sNomeGernerator.ToUpper().Equals("PRODUTO190"))
+                {
+                    sNumArq = "A" + sNumArq.Substring(1, 6);
+                }
+
                 return sNumArq.PadLeft(sTamanho, '0');
             }
             catch (Exception ex)

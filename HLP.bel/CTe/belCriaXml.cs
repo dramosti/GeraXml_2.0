@@ -354,6 +354,7 @@ namespace HLP.bel.CTe
                     #region imp
 
                     imp = new XElement(pf + "imp");
+                    //ICMS = new XElement(pf + "ICMS", new XElement(pf + "vTotTrib", "200.06"));
                     ICMS = new XElement(pf + "ICMS");
 
                     if (obj.imp.ICMS.ICMS00 != null)
