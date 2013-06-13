@@ -89,7 +89,7 @@ namespace HLP.bel
         {
             belUF objbelUf = new belUF();
             Versao = sVersao;
-            Tpamb = belStatic.tpAmb;
+            Tpamb = belStatic.TpAmb;
             Cuf = objbelUf.RetornaCUF(spcUF);
             Cert = xcert;
 

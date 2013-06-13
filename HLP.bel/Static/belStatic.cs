@@ -130,10 +130,11 @@ namespace HLP.bel.Static
             set { bNotaServico = value; }
         }
 
+        
+        private static int tpAmb;
         /// <summary>
         /// 1 – Produção / 2 - Homologação
         /// </summary>
-        public static int tpAmb;
         public static int TpAmb
         {
             get { return tpAmb; }

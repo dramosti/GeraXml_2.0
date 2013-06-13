@@ -87,7 +87,7 @@ namespace HLP.bel.NFe
                     dr.Read();
                     cx.Close_Conexao();
                     belStatic.codEmpresaNFe = sEmpresa;
-                    belStatic.tpAmb = Convert.ToInt16(dr["tpAmb"].ToString());
+                    belStatic.TpAmb = Convert.ToInt16(dr["tpAmb"].ToString());
                     belStatic.sNomeEmpresaCompleto = dr["nm_empresa"].ToString();
                     belStatic.CNPJ_Empresa = dr["cd_cgc"].ToString();
                     if (belStatic.RAMO != "TRANSPORTE" && belStatic.RAMO != "")

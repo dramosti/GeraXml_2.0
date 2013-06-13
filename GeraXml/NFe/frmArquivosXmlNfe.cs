@@ -105,7 +105,7 @@ namespace NfeGerarXml
                         objbelRegras.AlteraEmpresaParaHomologacao();
                     }
                     nmEmpresa.Text = belStatic.sNomeEmpresa + " - " + belStatic.codEmpresaNFe;
-                    nmStatus.Text = (belStatic.tpAmb == 1 ? "Produção" : "Homologação");
+                    nmStatus.Text = (belStatic.TpAmb == 1 ? "Produção" : "Homologação");
 
                     this.sVersao = LeRegWin.LeRegConfig("Empresa");
                     CarregaConfiguracoesIniciais(belStatic.codEmpresaNFe);
@@ -1932,7 +1932,7 @@ namespace NfeGerarXml
                     dr.Read();
 
                     this.cd_ufnor = dr["cd_ufnor"].ToString();
-                    belStatic.tpAmb = Convert.ToInt16(dr["tpAmb"]);
+                    belStatic.TpAmb = Convert.ToInt16(dr["tpAmb"]);
 
                     sRetorno = string.Format("Sistema Manager XML - MAGNIFICUS - {0}",
                                               dr["nm_empresa"].ToString());

@@ -31,7 +31,7 @@ namespace NfeGerarXml
         {
             _uf_empresa = uf_empresa;
             _emp = sEmp;
-            _tpamp = belStatic.tpAmb;
+            _tpamp = belStatic.TpAmb;
             this.objfrmArquivos = objfrmArquivos;
             InitializeComponent();
         }

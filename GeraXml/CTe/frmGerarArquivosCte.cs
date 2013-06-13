@@ -50,7 +50,7 @@ namespace NfeGerarXml
         {
             try
             {
-                lblAmbiente.Text = (belStatic.tpAmb == 1 ? "Produção" : "Homologação");
+                lblAmbiente.Text = (belStatic.TpAmb == 1 ? "Produção" : "Homologação");
                 objbelUfEmp.SiglaUF = belStatic.Sigla_uf;
                 DirectoryInfo info = new DirectoryInfo(belStaticPastas.CBARRAS);
                 LimparPasta(info);

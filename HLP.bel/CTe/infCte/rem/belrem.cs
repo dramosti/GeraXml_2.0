@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using HLP.bel.Static;
 
 namespace HLP.bel.CTe
 {
@@ -31,7 +32,7 @@ namespace HLP.bel.CTe
         private string _xNome = "";
         public string xNome
         {
-            get { return _xNome; }
+            get { return (belStatic.TpAmb == 2 ? "CT-E EMITIDO EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL" : _xNome); } //OS_29019
             set { _xNome = value; }
         }
 

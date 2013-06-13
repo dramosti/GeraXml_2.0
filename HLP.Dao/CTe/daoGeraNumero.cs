@@ -19,7 +19,7 @@ namespace HLP.Dao.CTe
             try
             {
                 string sQuery = "";
-                if (belStatic.sNomeEmpresa.ToUpper().Equals("SICUPIRA"))
+                if (belStatic.sNomeEmpresa.ToUpper().Equals("SICUPIRA") || belStatic.sNomeEmpresa.ToUpper().Equals("TRANSLILO"))  
                 {
                     string sGenerator = "CONHECIM_CTE" + belStatic.CodEmpresaCte;
                     sQuery = "SELECT GEN_ID(" + sGenerator + ", 0 ) FROM RDB$DATABASE";
@@ -107,7 +107,7 @@ namespace HLP.Dao.CTe
             {
                 string sQuery = "";
 
-                if (belStatic.sNomeEmpresa.ToUpper().Equals("SICUPIRA"))
+                if (belStatic.sNomeEmpresa.ToUpper().Equals("SICUPIRA") || belStatic.sNomeEmpresa.ToUpper().Equals("TRANSLILO"))
                 {
                     sQuery = "update conhecim set  cd_conheci = '" + objbel.cdConhec.PadLeft(6, '0') + "' "
                                 + "where cd_empresa = '" + sEmp + "' "
@@ -137,7 +137,7 @@ namespace HLP.Dao.CTe
             try
             {
                 string sGenerator = "";
-                if (belStatic.sNomeEmpresa.ToUpper().Equals("SICUPIRA"))
+                if (belStatic.sNomeEmpresa.ToUpper().Equals("SICUPIRA") || belStatic.sNomeEmpresa.ToUpper().Equals("TRANSLILO"))
                 {
                     sGenerator = "CONHECIM_CTE" + belStatic.CodEmpresaCte; ;
                 }

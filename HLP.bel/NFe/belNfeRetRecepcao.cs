@@ -43,7 +43,7 @@ namespace HLP.bel
         {
             this.bModoSCAN = bModoSCAN;
             _versao = sVersao;
-            _tpamb = belStatic.tpAmb;
+            _tpamb = belStatic.TpAmb;
             _nrec = snRec;
             _pversaoaplic = sversaoaplic;
             _cert = xcert;

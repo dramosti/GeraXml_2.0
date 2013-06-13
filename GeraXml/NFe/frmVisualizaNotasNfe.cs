@@ -1719,7 +1719,7 @@ namespace NfeGerarXml
                     objdest.Cpf = mtbCpfCnpjDest.Text.Trim();
                 }
 
-                objdest.Xnome = (belStatic.tpAmb == 2 ? "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL"
+                objdest.Xnome = (belStatic.TpAmb == 2 ? "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL"
                     : txtXnomeDest.Text.Trim());
 
                 objdest.Ie = txtIEDest.Text.Trim();// (belStatic.tpAmb == 2 ? "" : txtIEDest.Text.Trim());

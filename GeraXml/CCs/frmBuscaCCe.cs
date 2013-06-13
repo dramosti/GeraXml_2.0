@@ -34,7 +34,7 @@ namespace NfeGerarXml.CCe
                 InitializeComponent();
                 HLP.bel.NFe.belConfigInicial.CarregaConfiguracoesIniciais();
                 nmEmpresa.Text = belStatic.sNomeEmpresa + " - " + belStatic.codEmpresaNFe;
-                nmAmbiente.Text = (belStatic.tpAmb == 1 ? "Produção" : "Homologação");
+                nmAmbiente.Text = (belStatic.TpAmb == 1 ? "Produção" : "Homologação");
             }
             catch (Exception ex)
             {

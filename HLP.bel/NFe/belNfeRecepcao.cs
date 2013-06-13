@@ -472,7 +472,7 @@ namespace HLP.bel
         public belNfeRecepcao(string sCaminhoXml,string VersaoDados, X509Certificate2 cert, string UF_Empresa, bool bModoSCAN, int iSerieSCAN)
         {
             _xelem = sCaminhoXml;
-            _ptpamb = belStatic.tpAmb;
+            _ptpamb = belStatic.TpAmb;
             _pversaoaDados = VersaoDados;
             _cert = cert;
 

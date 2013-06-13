@@ -32,7 +32,7 @@ namespace NfeGerarXml
 
                 
                 daoGeraNumero objdaoGeraNumero = new daoGeraNumero();
-                if (belStatic.sNomeEmpresa.ToUpper().Equals("SICUPIRA"))
+                if (belStatic.sNomeEmpresa.ToUpper().Equals("SICUPIRA") || belStatic.sNomeEmpresa.ToUpper().Equals("TRANSLILO"))
                 {
                     string sGenerator = "CONHECIM_CTE" + belStatic.CodEmpresaCte;
                     HLP.Dao.NFes.daoUtil util = new HLP.Dao.NFes.daoUtil();
@@ -66,7 +66,7 @@ namespace NfeGerarXml
                     pgbNF.Value++;
                 }
 
-                if (belStatic.sNomeEmpresa.ToUpper().Equals("SICUPIRA"))
+                if (belStatic.sNomeEmpresa.ToUpper().Equals("SICUPIRA") || belStatic.sNomeEmpresa.ToUpper().Equals("TRANSLILO"))
                 {
                     objdaoGeraNumero.AtualizaGenerator(objLbelConhec[objLbelConhec.Count - 1].cdConhec);
                 }

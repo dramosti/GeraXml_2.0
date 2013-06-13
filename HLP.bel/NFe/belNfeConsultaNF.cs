@@ -37,7 +37,7 @@ namespace HLP.bel
         public belNfeConsultaNF(string sVersao, string sVerDados,  string sChnfe, string sXServ)
         {
             Globais Gb = new Globais();
-            _tpamb = belStatic.tpAmb;         
+            _tpamb = belStatic.TpAmb;         
             _versao = sVersao;
             _versaodados = "2.01";
             _xserv = sXServ;

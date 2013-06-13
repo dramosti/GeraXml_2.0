@@ -23,7 +23,7 @@ namespace HLP.Dao.CCe
                 {
                     case "SP":
                         {
-                            if (belStatic.tpAmb == 2)
+                            if (belStatic.TpAmb == 2)
                             {
                                 #region sp_homologacao
                                 HLP.WebService.v2_Homologacao_NFeRecepcaoEvento_SP.nfeCabecMsg cabec = new HLP.WebService.v2_Homologacao_NFeRecepcaoEvento_SP.nfeCabecMsg();
@@ -70,7 +70,7 @@ namespace HLP.Dao.CCe
                         break;
                     case "RS":
                         {
-                            if (belStatic.tpAmb == 2)
+                            if (belStatic.TpAmb == 2)
                             {
                                 #region RS_homologacao
 
@@ -117,7 +117,7 @@ namespace HLP.Dao.CCe
                         break;
                     case "MS":
                         {
-                            if (belStatic.tpAmb == 2)
+                            if (belStatic.TpAmb == 2)
                             {
                                 HLP.WebService.v2_Homologacao_NFeRetRecepcao_MS.nfeCabecMsg cabec = new HLP.WebService.v2_Homologacao_NFeRetRecepcao_MS.nfeCabecMsg();
                                 HLP.WebService.v2_Homologacao_NFeRetRecepcao_MS.NfeRetRecepcao2 ws2 = new HLP.WebService.v2_Homologacao_NFeRetRecepcao_MS.NfeRetRecepcao2();

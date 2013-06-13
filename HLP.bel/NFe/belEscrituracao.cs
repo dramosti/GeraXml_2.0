@@ -823,11 +823,8 @@ namespace HLP.bel
                         {
                             Conexao.Open();
                         }
-
                         cmd.ExecuteNonQuery();
-
                     }
-
                 }
 
 

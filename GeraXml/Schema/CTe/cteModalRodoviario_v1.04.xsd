@@ -219,8 +219,7 @@
 								</xs:annotation>
 								<xs:simpleType>
 									<xs:restriction base="TString">
-										<xs:minLength value="9"/>
-										<xs:maxLength value="11"/>
+										<xs:length value="9"/>
 									</xs:restriction>
 								</xs:simpleType>
 							</xs:element>

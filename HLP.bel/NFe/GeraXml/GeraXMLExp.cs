@@ -217,7 +217,7 @@ namespace HLP.bel.NFe.GeraXml
                                               (objdest.Cnpj == "EXTERIOR" ? new XElement(pf + "CNPJ") :
                                                  (objdest.Cnpj != null ? new XElement(pf + "CNPJ", objdest.Cnpj) :
                                                                         new XElement(pf + "CPF", objdest.Cpf))),
-                                              new XElement(pf + "xNome", (belStatic.tpAmb == 2 ? "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL" : objdest.Xnome.ToString().Trim())),
+                                              new XElement(pf + "xNome", (belStatic.TpAmb == 2 ? "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL" : objdest.Xnome.ToString().Trim())),
                                               new XElement(pf + "enderDest",
                                                   new XElement(pf + "xLgr", objdest.Xlgr.ToString()),
                                                   new XElement(pf + "nro", (objdest.Nro != null ? objdest.Nro.ToString() : "0")),

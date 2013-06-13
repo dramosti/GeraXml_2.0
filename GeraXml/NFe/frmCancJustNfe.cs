@@ -32,7 +32,7 @@ namespace NfeGerarXml
             this.objfrmArquivos = objfrmArquivos;
             _snotacanc = sNotaCanc;
             _emp = sEmp;
-            _tpamb = belStatic.tpAmb;
+            _tpamb = belStatic.TpAmb;
             //Danner - o.s. 23984 - 07/01/2010
             this.UF_Empresa = _UF_Empresa;
             //Fim - Danner - o.s. 23984 - 07/01/2010

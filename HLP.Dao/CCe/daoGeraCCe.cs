@@ -65,7 +65,7 @@ namespace HLP.Dao.CCe
                 objEvento.infEvento.CPF = objbelPesquisa.CPF;
                 objEvento.infEvento.dhEvento = HLP.Util.Util.GetDateServidor().ToString("yyyy-MM-ddTHH:mm:ss" + belStatic.sFuso);//objbelPesquisa.DT_LANC;
                 objEvento.infEvento.verEvento = _VERSAO;
-                objEvento.infEvento.tpAmb = belStatic.tpAmb;
+                objEvento.infEvento.tpAmb = belStatic.TpAmb;
                 objEvento.infEvento.chNFe = objbelPesquisa.CHNFE;
                 objEvento.infEvento.cOrgao = belStatic.cUF.ToString();
                 objEvento.infEvento.detEvento = new _detEvento
