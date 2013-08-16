@@ -287,6 +287,7 @@ namespace HLP.bel.CTe
 
                     #region receb
 
+                    receb = null;
                     if (obj.receb != null)
                     {
                         receb = (new XElement(pf + "receb", obj.receb.CNPJ != "" ? new XElement(pf + "CNPJ", obj.receb.CNPJ) : null,

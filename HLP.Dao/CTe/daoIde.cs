@@ -82,7 +82,7 @@ namespace HLP.Dao.CTe
                 objbelinfCte.ide.xMunIni = dr["xMunIni"].ToString();
                 objbelinfCte.ide.UFIni = dr["UFIni"].ToString();
                 objbelinfCte.ide.cMunIni = dr["cMunIni"].ToString();
-                objbelinfCte.ide.xMunFim = dr["xMunFim"].ToString();
+                objbelinfCte.ide.xMunFim =  dr["xMunFim"].ToString();
                 objbelinfCte.ide.UFFim = dr["UFFim"].ToString();
                 objbelinfCte.ide.cMunFim = dr["cMunFim"].ToString();
                 objbelinfCte.ide.retira = 0;
